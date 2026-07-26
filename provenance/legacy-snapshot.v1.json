@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "kind": "legacy-source-attestation",
+  "snapshot": {
+    "source_git_commit": "6912653d881bedee71ef527bc5650db55f115779",
+    "scope": "The three files present before portfolio rehabilitation began.",
+    "legacy_state": "quarantined",
+    "supported_entrypoint": null
+  },
+  "files": [
+    {
+      "path": "configs/ds_config_zero3.json",
+      "byte_length": 1299,
+      "line_count": 51,
+      "git_mode": "100644",
+      "sha256": "c0efd31093f7d6e2ca8ea5fcd77e28a7aff6c3306893af56622850faa104d6a7",
+      "git_blob_sha1": "a90c20c916c762a8b7d977d53b49bb617318bb5a"
+    },
+    {
+      "path": "finetune.py",
+      "byte_length": 8667,
+      "line_count": 230,
+      "git_mode": "100644",
+      "sha256": "5de3316c8cf37edea97e83230fd90bf01092582dc25016c87fdc404aa1024e26",
+      "git_blob_sha1": "d334caa2cec91ed97a1974cdf61e3ab0d3edf415"
+    },
+    {
+      "path": "requirements.txt",
+      "byte_length": 111,
+      "line_count": 10,
+      "git_mode": "100644",
+      "sha256": "da3b0ecac531b2f304528f5778c136eef38b8deca8e7dea548c95e7a40e8ea77",
+      "git_blob_sha1": "f6e03b76439065c4528f8ebbd2276388ab65d6ba"
+    }
+  ],
+  "provenance": {
+    "upstream_project": "DeepSeek-MoE",
+    "upstream_repository": "https://github.com/deepseek-ai/DeepSeek-MoE",
+    "upstream_git_commit": "66edeee5a4f75cbd76e0316229ad101805a90e01",
+    "upstream_file_identities": [
+      {
+        "path": "finetune/finetune.py",
+        "byte_length": 13274,
+        "git_blob_sha1": "244ff4e11416ab4687df3a7343df36846ff45e81"
+      },
+      {
+        "path": "finetune/configs/ds_config_zero3.json",
+        "byte_length": 1348,
+        "git_blob_sha1": "73f3b5f4c430d1ff5ab5ac9e82c11f436440e728"
+      },
+      {
+        "path": "LICENSE-CODE",
+        "byte_length": 1065,
+        "git_blob_sha1": "d84f527e101b2cdd171e2b14253f84ea4fedabe9"
+      }
+    ],
+    "upstream_code_license": {
+      "name": "MIT",
+      "reference": "https://github.com/deepseek-ai/DeepSeek-MoE/blob/66edeee5a4f75cbd76e0316229ad101805a90e01/LICENSE-CODE",
+      "local_notice_path": "third_party/deepseek-moe/LICENSE-CODE",
+      "local_notice_byte_length": 1065,
+      "local_notice_sha256": "6e4c38e1172f42fdbff13edf9a7a017679fb82b0fde415a3e8b3c31c6ed4a4e4"
+    },
+    "model_license_boundary": "separate-terms-not-vendored-or-attested",
+    "dataset_license_boundary": "no-dataset-vendored-or-attested",
+    "observations": [
+      {
+        "id": "trainer-line-lcs",
+        "local_path": "finetune.py",
+        "upstream_path": "finetune/finetune.py",
+        "method": "exact-line-longest-common-subsequence",
+        "local_line_count": 230,
+        "matching_line_count": 185,
+        "relationship": "substantial-line-overlap-observed",
+        "upstream_bytes_vendored": false,
+        "reproducible_from_this_repository_alone": false
+      },
+      {
+        "id": "zero3-semantic-json",
+        "local_path": "configs/ds_config_zero3.json",
+        "upstream_path": "finetune/configs/ds_config_zero3.json",
+        "method": "sorted-compact-json-utf8-line-v1",
+        "semantic_sha256": "ac305ab8aba093eb0a29f94629baf3c89ca266077f1246ae89a42b3648aaf23e",
+        "relationship": "equal-semantic-hash-observed",
+        "upstream_bytes_vendored": false,
+        "reproducible_from_this_repository_alone": false
+      }
+    ]
+  }
+}
