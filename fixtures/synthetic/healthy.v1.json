@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "kind": "loss-topology.synthetic-pretokenized-trace",
+  "example_id": "healthy-multiturn",
+  "conversation": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "Answer with one synthetic color."
+      },
+      {
+        "role": "user",
+        "content": "First color?"
+      },
+      {
+        "role": "assistant",
+        "content": "Blue."
+      },
+      {
+        "role": "user",
+        "content": "Second color?"
+      },
+      {
+        "role": "assistant",
+        "content": "Amber."
+      }
+    ]
+  },
+  "trace": {
+    "token_ids": [
+      1,
+      10,
+      11,
+      101,
+      102,
+      12,
+      20,
+      21,
+      201,
+      202,
+      203,
+      22,
+      30,
+      31,
+      301,
+      302,
+      303,
+      304,
+      32,
+      20,
+      21,
+      204,
+      205,
+      22,
+      30,
+      31,
+      305,
+      306,
+      307,
+      32,
+      2,
+      0,
+      0
+    ],
+    "padding_token_id": 0,
+    "segments": [
+      {
+        "kind": "prefix_special",
+        "message_index": null,
+        "start": 0,
+        "end": 1
+      },
+      {
+        "kind": "message_start",
+        "message_index": 0,
+        "start": 1,
+        "end": 3
+      },
+      {
+        "kind": "message_content",
+        "message_index": 0,
+        "start": 3,
+        "end": 5
+      },
+      {
+        "kind": "message_end",
+        "message_index": 0,
+        "start": 5,
+        "end": 6
+      },
+      {
+        "kind": "message_start",
+        "message_index": 1,
+        "start": 6,
+        "end": 8
+      },
+      {
+        "kind": "message_content",
+        "message_index": 1,
+        "start": 8,
+        "end": 11
+      },
+      {
+        "kind": "message_end",
+        "message_index": 1,
+        "start": 11,
+        "end": 12
+      },
+      {
+        "kind": "message_start",
+        "message_index": 2,
+        "start": 12,
+        "end": 14
+      },
+      {
+        "kind": "message_content",
+        "message_index": 2,
+        "start": 14,
+        "end": 18
+      },
+      {
+        "kind": "message_end",
+        "message_index": 2,
+        "start": 18,
+        "end": 19
+      },
+      {
+        "kind": "message_start",
+        "message_index": 3,
+        "start": 19,
+        "end": 21
+      },
+      {
+        "kind": "message_content",
+        "message_index": 3,
+        "start": 21,
+        "end": 23
+      },
+      {
+        "kind": "message_end",
+        "message_index": 3,
+        "start": 23,
+        "end": 24
+      },
+      {
+        "kind": "message_start",
+        "message_index": 4,
+        "start": 24,
+        "end": 26
+      },
+      {
+        "kind": "message_content",
+        "message_index": 4,
+        "start": 26,
+        "end": 29
+      },
+      {
+        "kind": "message_end",
+        "message_index": 4,
+        "start": 29,
+        "end": 30
+      },
+      {
+        "kind": "suffix_special",
+        "message_index": null,
+        "start": 30,
+        "end": 31
+      },
+      {
+        "kind": "padding",
+        "message_index": null,
+        "start": 31,
+        "end": 33
+      }
+    ]
+  }
+}
