@@ -1,8 +1,9 @@
 # LossTopology Lab
 
-> **Rehabilitation status:** provenance foundation only. The inherited trainer
-> is quarantined, not a supported entry point. This repository does not yet
-> claim a successful training run, model-quality result, or benchmark.
+> **Rehabilitation status:** original CPU-only topology lab plus a provenance
+> boundary. The inherited trainer is quarantined, not a supported entry point.
+> This repository does not claim a successful training run, tokenizer result,
+> model-quality result, perplexity value, or benchmark.
 
 LossTopology Lab is being built as a CPU-runnable audit system for supervised
 fine-tuning token boundaries and assistant-only loss masks. Its first task is
@@ -26,8 +27,10 @@ flowchart LR
 | Local semantic check | ZeRO-3 JSON normalized and re-hashed without third-party packages | `tools/verify_legacy_snapshot.py` |
 | Attribution | DeepSeek-MoE credited; upstream MIT code notice retained locally | `THIRD_PARTY_NOTICES.md` |
 | Drift tests | Byte changes, formatting-only changes, duplicate JSON keys, symlinks, and notice drift fail closed | `tests/test_legacy_attestation.py` |
+| Synthetic trace contract | Strict v1 conversations, explicit token spans, immutable models, canonical identities | `docs/synthetic-trace-contract.md` |
+| Loss topology engine | Deterministic all-token and assistant-only label construction plus boundary/run audits | `docs/loss-topology-audit.md` |
+| Safe CLI | Bounded stdlib input and atomic canonical audit output | `python3 -m loss_topology.cli --help` |
 | Models and data | Not downloaded, vendored, loaded, or attested | Explicit trust boundary |
-| LossTopology engine | Not implemented in this foundation slice | No capability claim |
 
 The inherited files remain at their historical paths so this first change does
 not rewrite their bytes or obscure repository history:
@@ -53,6 +56,34 @@ The verifier reads a bounded, strict JSON manifest; rejects duplicate keys,
 unsafe paths, symlinks, missing files, and schema ambiguity; checks every
 legacy byte identity; verifies the local third-party notice; and recomputes the
 local semantic hash. It performs no network access and imports no ML stack.
+
+## Audit a synthetic topology
+
+The checked fixtures contain synthetic text and hand-authored token IDs. The
+lab does not claim a real tokenizer produced them.
+
+```bash
+mkdir -p build
+python3 -m loss_topology.cli \
+  --input fixtures/synthetic/healthy.v1.json \
+  --output build/healthy.audit.json
+python3 -m json.tool build/healthy.audit.json
+```
+
+The output binds the validated input by canonical SHA-256, shows exact label
+arrays and supervised runs for both policies, and counts boundary, padding,
+off-policy, and missing-target positions. The deliberately empty assistant
+fixture returns status 1 with a canonical failing report:
+
+```bash
+python3 -m loss_topology.cli \
+  --input fixtures/synthetic/empty-assistant.v1.json \
+  --output build/empty-assistant.audit.json
+```
+
+Contract violations return status 2 and do not replace an existing output.
+See `docs/synthetic-trace-contract.md` and `docs/loss-topology-audit.md` for the
+limits and exact trust boundary.
 
 ## Provenance and license boundary
 
@@ -81,19 +112,13 @@ separately pin and document every model, tokenizer, dataset, checkpoint,
 revision, checksum, and applicable license before it can enter a reproducible
 workflow.
 
-## Planned original system
+## Scope and next work
 
-New work will live outside the inherited trainer and will be tested against
-small synthetic conversations:
+All new lab code lives outside the inherited trainer and uses only the Python
+standard library. V1 accepts explicit caller-authored spans instead of
+pretending to reproduce a tokenizer. It already diagnoses zero-target,
+padding, special-boundary, duplicate-field, and supervision-leak conditions.
 
-1. a strict, bounded, versioned conversation and token-trace contract;
-2. whole-example tokenization with explicit role spans and assistant-only loss
-   topology;
-3. differential checks for separately-tokenized prefix-boundary drift;
-4. truncation, zero-target, padding, special-token, duplicate, and split-leak
-   diagnostics;
-5. deterministic risk certificates, counterexample traces, and reproducible
-   visual evidence.
-
-Until those pieces land with tests and real evidence, they are a roadmap—not
-features.
+Real-tokenizer differential checks, truncation counterexamples, split-leak
+analysis, risk certificates, and reproducible visual evidence remain future
+work. They are not current capability claims.

@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "loss-topology-lab"
+version = "0.1.0"
+description = "Strict CPU-only auditing for synthetic SFT label topologies"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+authors = [{ name = "Omar Ibrahim" }]
+
+[project.scripts]
+loss-topology-audit = "loss_topology.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["loss_topology*"]
