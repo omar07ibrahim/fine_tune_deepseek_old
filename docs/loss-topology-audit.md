@@ -51,3 +51,22 @@ field values, parser excerpts, or filesystem paths.
 The CLI reads no model, dataset, tokenizer, checkpoint, configuration, or
 inherited trainer input. Python necessarily imports the lab's own source; the
 only data payload it opens is the explicitly supplied synthetic JSON.
+
+## Executable visual evidence
+
+The committed evidence bundle reruns the CLI against both synthetic fixtures,
+captures its real stdout and exit status, and renders the canonical reports
+without adding a model or tokenizer dependency:
+
+![Real LossTopology CLI subprocess capture](evidence/generated/cli-session.svg)
+
+The separate fault view calls the public `audit_label_topology` API with three
+controlled in-memory label mutations. It does not pass those labels to the
+CLI, and it does not present them as CLI output:
+
+![Assistant-only in-memory fault detection](evidence/generated/assistant-only-fault-diagnostics.svg)
+
+Run `python3 tools/render_loss_topology_evidence.py --check` from the repository
+root to reconstruct the reports, transcript, visual lanes, and exact manifest.
+See `docs/reproducible-evidence.md` for the closed source allowlist, atomic
+publication contract, and non-claims.

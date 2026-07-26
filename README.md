@@ -10,6 +10,8 @@ fine-tuning token boundaries and assistant-only loss masks. Its first task is
 more fundamental: establish an honest, testable boundary around the repository
 that existed before the new system.
 
+![Source-generated comparison of all-token and assistant-only supervision over the healthy synthetic trace](docs/evidence/generated/policy-topology.svg)
+
 ```mermaid
 flowchart LR
     L["3 inherited files<br/>exact bytes"] --> M["Versioned legacy manifest"]
@@ -30,6 +32,7 @@ flowchart LR
 | Synthetic trace contract | Strict v1 conversations, explicit token spans, immutable models, canonical identities | `docs/synthetic-trace-contract.md` |
 | Loss topology engine | Deterministic all-token and assistant-only label construction plus boundary/run audits | `docs/loss-topology-audit.md` |
 | Safe CLI | Bounded stdlib input and atomic canonical audit output | `python3 -m loss_topology.cli --help` |
+| Reproducible evidence | Two real CLI runs, three public-API fault injections, three SVGs, exact reports, and a source/artifact manifest | `docs/reproducible-evidence.md` |
 | Models and data | Not downloaded, vendored, loaded, or attested | Explicit trust boundary |
 
 The inherited files remain at their historical paths so this first change does
@@ -85,6 +88,41 @@ Contract violations return status 2 and do not replace an existing output.
 See `docs/synthetic-trace-contract.md` and `docs/loss-topology-audit.md` for the
 limits and exact trust boundary.
 
+## Reproducible visual evidence
+
+The evidence generator is hardcoded to the two committed synthetic fixtures.
+It invokes the public CLI twice in a repository-local ephemeral sandbox and
+captures the actual stdout, stderr state, exit code, and canonical reports.
+The empty-assistant fixture's exit status 1 is an expected diagnostic result,
+not a CLI or contract error.
+
+![Real subprocess capture for the healthy and empty-assistant synthetic fixtures](docs/evidence/generated/cli-session.svg)
+
+The fault view is a different execution boundary. It deliberately changes
+three in-memory `assistant_only` label arrays and passes them to the public
+`audit_label_topology` API. Those mutations are not CLI inputs or outputs.
+
+![Executed in-memory assistant-only fault injections and exact detected positions](docs/evidence/generated/assistant-only-fault-diagnostics.svg)
+
+Regenerate or verify every byte with the Python standard library:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 \
+  python3 tools/render_loss_topology_evidence.py --write
+PYTHONDONTWRITEBYTECODE=1 \
+  python3 tools/render_loss_topology_evidence.py --check
+```
+
+`--check` reruns both CLI cases, reconstructs all visuals and the manifest, and
+requires byte-for-byte agreement. Publication stages the complete bundle,
+rolls back if any artifact fails, and replaces the
+[manifest](docs/evidence/generated/loss-topology-evidence.v1.json) last.
+The canonical [healthy report](docs/evidence/generated/healthy.audit.json),
+[empty-target report](docs/evidence/generated/empty-assistant.audit.json), and
+[raw CLI transcript](docs/evidence/generated/cli-session.txt) remain directly
+inspectable. See [the evidence contract](docs/reproducible-evidence.md) for the
+source allowlist and claim boundary.
+
 ## Provenance and license boundary
 
 A review found that 185 of the 230 local trainer lines participate in an exact
@@ -120,5 +158,5 @@ pretending to reproduce a tokenizer. It already diagnoses zero-target,
 padding, special-boundary, duplicate-field, and supervision-leak conditions.
 
 Real-tokenizer differential checks, truncation counterexamples, split-leak
-analysis, risk certificates, and reproducible visual evidence remain future
-work. They are not current capability claims.
+analysis, risk certificates, and model-bound evaluation remain future work.
+They are not current capability claims.
