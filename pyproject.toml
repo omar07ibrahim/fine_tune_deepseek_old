@@ -11,8 +11,14 @@ requires-python = ">=3.11"
 dependencies = []
 authors = [{ name = "Omar Ibrahim" }]
 
+[project.optional-dependencies]
+tokenizer-lab = ["tokenizers==0.21.4"]
+
 [project.scripts]
 loss-topology-audit = "loss_topology.cli:main"
 
 [tool.setuptools.packages.find]
-include = ["loss_topology*"]
+include = ["loss_topology*", "token_boundary*"]
+
+[tool.setuptools.package-data]
+token_boundary = ["artifacts/*.json"]

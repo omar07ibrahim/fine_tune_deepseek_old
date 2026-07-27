@@ -1,0 +1,39 @@
+{
+  "schema_version": "token-boundary-artifact-manifest-v1",
+  "artifact": {
+    "byte_count": 1533,
+    "format": "huggingface-tokenizers-json-v1",
+    "id": "local-boundary-bpe-v1",
+    "origin": "locally-authored-synthetic",
+    "path": "local-boundary-bpe.v1.json",
+    "sha256": "29508edbb44ce9cbe77cdde972c0919fe3df8ee2ae1270e69545314f2e1f8358"
+  },
+  "intent": {
+    "bpe_merges": [
+      "a b"
+    ],
+    "normalizers": [
+      "NFC",
+      "Strip(left=false,right=true)"
+    ],
+    "post_processor": "prefix-bos-only",
+    "pre_tokenizer": "none",
+    "truncation": "caller-bounded-right"
+  },
+  "runtime": {
+    "audit_mode": "offline-after-provisioning",
+    "package": "tokenizers",
+    "provisioning_may_use_network": true,
+    "version": "0.21.4"
+  },
+  "scope": {
+    "dataset_loaded": false,
+    "deepseek_model_executed": false,
+    "deepseek_tokenizer_attested": false,
+    "gpu_used": false,
+    "inherited_trainer_executed": false,
+    "model_or_tokenizer_downloaded_by_audit": false,
+    "pretrained_artifact": false,
+    "training_or_forward_pass_executed": false
+  }
+}

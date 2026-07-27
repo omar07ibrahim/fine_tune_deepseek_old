@@ -1,0 +1,7 @@
+{
+  "schema_version": "token-boundary-synthetic-case-v1",
+  "case_id": "target-eliminated",
+  "source": "cdef",
+  "target": "g",
+  "max_length": 5
+}

@@ -1,0 +1,7 @@
+{
+  "schema_version": "token-boundary-synthetic-case-v1",
+  "case_id": "nfc-cross-boundary",
+  "source": "e",
+  "target": "\u0301x",
+  "max_length": 8
+}

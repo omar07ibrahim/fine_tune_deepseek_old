@@ -29,6 +29,20 @@ and exact Git blob identities. Because those upstream bytes are not vendored,
 the local verifier recomputes only the local side of the evidence. It does not
 claim to reproduce the cross-repository comparison offline.
 
+## Optional Tokenizers runtime
+
+The tokenizer-boundary lab declares
+[`tokenizers==0.21.4`](https://pypi.org/project/tokenizers/0.21.4/) as an exact
+optional runtime. The package is published under the Apache Software License
+and provides the Rust-backed tokenizer implementation exercised by the local
+synthetic artifact. No Tokenizers source or binary is vendored in this
+repository.
+
+Installing the optional extra may resolve transitive packages and may contact a
+package index. Those packages retain their own terms. The lab's offline claim
+starts only after provisioning: its audit API accepts no Hub identifier, URL,
+or caller-selected tokenizer artifact.
+
 ## Separate model and data terms
 
 The upstream code license is not a model license. Anyone who later supplies a
