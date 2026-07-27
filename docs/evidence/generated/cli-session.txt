@@ -1,0 +1,14 @@
+LOSS TOPOLOGY LAB / REAL SUBPROCESS CAPTURE
+evidence sandbox: committed synthetic fixtures copied byte-for-byte; repository loss_topology package
+scope: no tokenizer, causal shift, loss, model, trainer, dataset, network, or GPU
+
+$ python3 -m loss_topology.cli --input input/healthy.v1.json --output output/healthy.audit.json
+{"output_sha256":"8e562de5355e1ec7bf516119f2174613ac48b9db5da45bcf8f5492b821c29fab","status":"pass"}
+[recorder] exit=0 stderr=empty
+
+$ python3 -m loss_topology.cli --input input/empty-assistant.v1.json --output output/empty-assistant.audit.json
+{"output_sha256":"7c04b2309a661b1b0e748cb2ce5948817c65630b27e4ba3131670bd21d1c54d2","status":"fail"}
+[recorder] exit=1 stderr=empty
+
+note: exit 1 is the expected diagnostic status for the valid empty-assistant fixture; it is not a CLI error
+fault-injection evidence is executed separately in memory through audit_label_topology; it is not CLI output

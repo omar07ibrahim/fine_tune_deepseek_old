@@ -1,0 +1,239 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="820" viewBox="0 0 1600 820" role="img" aria-labelledby="title description">
+  <title id="title">Assistant-only fault injections and detected positions</title>
+  <desc id="description">Three controlled in-memory synthetic label mutations audited through the public assistant-only topology API.</desc>
+  <rect width="1600" height="820" fill="#08111f"/>
+  <style>
+    .sans { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    .title { fill: #f8fafc; font-size: 34px; font-weight: 760; }
+    .subtitle { fill: #cbd5e1; font-size: 17px; }
+    .label { fill: #e2e8f0; font-size: 16px; font-weight: 680; }
+    .small { fill: #cbd5e1; font-size: 13px; }
+    .tiny { fill: #e2e8f0; font-size: 11px; }
+    .scope { fill: #dbeafe; font-size: 13px; font-weight: 650; letter-spacing: .35px; }
+  </style>
+  <text x="72" y="70" class="sans title">Assistant-only fault injections and detected positions</text>
+  <text x="72" y="106" class="sans subtitle">Executed through public audit_label_topology · controlled in-memory mutations, not CLI inputs or outputs</text>
+  <rect x="72" y="130" width="1456" height="44" rx="10" fill="#10233f" stroke="#1d4ed8"/>
+  <text x="94" y="157" class="sans scope">SYNTHETIC LABEL MUTATIONS · NO TOKENIZER / LOSS / MODEL / TRAINER / DATASET / GPU</text>
+  <text x="72" y="224" class="sans small">Green = valid assistant target · red = injected off-policy supervision · amber outline = omitted eligible target</text>
+  <text x="72" y="294" class="sans label">Boundary leak @ 12</text>
+  <rect x="300" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 0: ignored</title></rect>
+  <text x="312.5" y="327" class="mono tiny" text-anchor="middle">0</text>
+  <rect x="327" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 1: ignored</title></rect>
+  <text x="339.5" y="327" class="mono tiny" text-anchor="middle">1</text>
+  <rect x="354" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 2: ignored</title></rect>
+  <text x="366.5" y="327" class="mono tiny" text-anchor="middle">2</text>
+  <rect x="381" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 3: ignored</title></rect>
+  <text x="393.5" y="327" class="mono tiny" text-anchor="middle">3</text>
+  <rect x="408" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 4: ignored</title></rect>
+  <text x="420.5" y="327" class="mono tiny" text-anchor="middle">4</text>
+  <rect x="435" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 5: ignored</title></rect>
+  <text x="447.5" y="327" class="mono tiny" text-anchor="middle">5</text>
+  <rect x="462" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 6: ignored</title></rect>
+  <text x="474.5" y="327" class="mono tiny" text-anchor="middle">6</text>
+  <rect x="489" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 7: ignored</title></rect>
+  <text x="501.5" y="327" class="mono tiny" text-anchor="middle">7</text>
+  <rect x="516" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 8: ignored</title></rect>
+  <text x="528.5" y="327" class="mono tiny" text-anchor="middle">8</text>
+  <rect x="543" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 9: ignored</title></rect>
+  <text x="555.5" y="327" class="mono tiny" text-anchor="middle">9</text>
+  <rect x="570" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 10: ignored</title></rect>
+  <text x="582.5" y="327" class="mono tiny" text-anchor="middle">10</text>
+  <rect x="597" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 11: ignored</title></rect>
+  <text x="609.5" y="327" class="mono tiny" text-anchor="middle">11</text>
+  <rect x="624" y="270" width="25" height="38" rx="3" fill="#dc2626" stroke="#fecaca" stroke-width="2"><title>position 12: supervised</title></rect>
+  <text x="636.5" y="327" class="mono tiny" text-anchor="middle">12</text>
+  <rect x="651" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 13: ignored</title></rect>
+  <text x="663.5" y="327" class="mono tiny" text-anchor="middle">13</text>
+  <rect x="678" y="270" width="25" height="38" rx="3" fill="#16a34a" stroke="#bbf7d0" stroke-width="1"><title>position 14: supervised</title></rect>
+  <text x="690.5" y="327" class="mono tiny" text-anchor="middle">14</text>
+  <rect x="705" y="270" width="25" height="38" rx="3" fill="#16a34a" stroke="#bbf7d0" stroke-width="1"><title>position 15: supervised</title></rect>
+  <text x="717.5" y="327" class="mono tiny" text-anchor="middle">15</text>
+  <rect x="732" y="270" width="25" height="38" rx="3" fill="#16a34a" stroke="#bbf7d0" stroke-width="1"><title>position 16: supervised</title></rect>
+  <text x="744.5" y="327" class="mono tiny" text-anchor="middle">16</text>
+  <rect x="759" y="270" width="25" height="38" rx="3" fill="#16a34a" stroke="#bbf7d0" stroke-width="1"><title>position 17: supervised</title></rect>
+  <text x="771.5" y="327" class="mono tiny" text-anchor="middle">17</text>
+  <rect x="786" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 18: ignored</title></rect>
+  <text x="798.5" y="327" class="mono tiny" text-anchor="middle">18</text>
+  <rect x="813" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 19: ignored</title></rect>
+  <text x="825.5" y="327" class="mono tiny" text-anchor="middle">19</text>
+  <rect x="840" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 20: ignored</title></rect>
+  <text x="852.5" y="327" class="mono tiny" text-anchor="middle">20</text>
+  <rect x="867" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 21: ignored</title></rect>
+  <text x="879.5" y="327" class="mono tiny" text-anchor="middle">21</text>
+  <rect x="894" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 22: ignored</title></rect>
+  <text x="906.5" y="327" class="mono tiny" text-anchor="middle">22</text>
+  <rect x="921" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 23: ignored</title></rect>
+  <text x="933.5" y="327" class="mono tiny" text-anchor="middle">23</text>
+  <rect x="948" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 24: ignored</title></rect>
+  <text x="960.5" y="327" class="mono tiny" text-anchor="middle">24</text>
+  <rect x="975" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 25: ignored</title></rect>
+  <text x="987.5" y="327" class="mono tiny" text-anchor="middle">25</text>
+  <rect x="1002" y="270" width="25" height="38" rx="3" fill="#16a34a" stroke="#bbf7d0" stroke-width="1"><title>position 26: supervised</title></rect>
+  <text x="1014.5" y="327" class="mono tiny" text-anchor="middle">26</text>
+  <rect x="1029" y="270" width="25" height="38" rx="3" fill="#16a34a" stroke="#bbf7d0" stroke-width="1"><title>position 27: supervised</title></rect>
+  <text x="1041.5" y="327" class="mono tiny" text-anchor="middle">27</text>
+  <rect x="1056" y="270" width="25" height="38" rx="3" fill="#16a34a" stroke="#bbf7d0" stroke-width="1"><title>position 28: supervised</title></rect>
+  <text x="1068.5" y="327" class="mono tiny" text-anchor="middle">28</text>
+  <rect x="1083" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 29: ignored</title></rect>
+  <text x="1095.5" y="327" class="mono tiny" text-anchor="middle">29</text>
+  <rect x="1110" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 30: ignored</title></rect>
+  <text x="1122.5" y="327" class="mono tiny" text-anchor="middle">30</text>
+  <rect x="1137" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 31: ignored</title></rect>
+  <text x="1149.5" y="327" class="mono tiny" text-anchor="middle">31</text>
+  <rect x="1164" y="270" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 32: ignored</title></rect>
+  <text x="1176.5" y="327" class="mono tiny" text-anchor="middle">32</text>
+  <text x="1210" y="272" class="mono small">runs: [12,13), [14,18), [26,29)</text>
+  <text x="1210" y="296" class="mono small">boundary: 12</text>
+  <text x="1210" y="320" class="mono small">padding: none</text>
+  <text x="1210" y="344" class="mono small">off-policy: 12</text>
+  <text x="1210" y="368" class="mono small">missing: none</text>
+  <text x="72" y="448" class="sans label">User + padding @ 8, 31</text>
+  <rect x="300" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 0: ignored</title></rect>
+  <text x="312.5" y="481" class="mono tiny" text-anchor="middle">0</text>
+  <rect x="327" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 1: ignored</title></rect>
+  <text x="339.5" y="481" class="mono tiny" text-anchor="middle">1</text>
+  <rect x="354" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 2: ignored</title></rect>
+  <text x="366.5" y="481" class="mono tiny" text-anchor="middle">2</text>
+  <rect x="381" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 3: ignored</title></rect>
+  <text x="393.5" y="481" class="mono tiny" text-anchor="middle">3</text>
+  <rect x="408" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 4: ignored</title></rect>
+  <text x="420.5" y="481" class="mono tiny" text-anchor="middle">4</text>
+  <rect x="435" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 5: ignored</title></rect>
+  <text x="447.5" y="481" class="mono tiny" text-anchor="middle">5</text>
+  <rect x="462" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 6: ignored</title></rect>
+  <text x="474.5" y="481" class="mono tiny" text-anchor="middle">6</text>
+  <rect x="489" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 7: ignored</title></rect>
+  <text x="501.5" y="481" class="mono tiny" text-anchor="middle">7</text>
+  <rect x="516" y="424" width="25" height="38" rx="3" fill="#dc2626" stroke="#fecaca" stroke-width="2"><title>position 8: supervised</title></rect>
+  <text x="528.5" y="481" class="mono tiny" text-anchor="middle">8</text>
+  <rect x="543" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 9: ignored</title></rect>
+  <text x="555.5" y="481" class="mono tiny" text-anchor="middle">9</text>
+  <rect x="570" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 10: ignored</title></rect>
+  <text x="582.5" y="481" class="mono tiny" text-anchor="middle">10</text>
+  <rect x="597" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 11: ignored</title></rect>
+  <text x="609.5" y="481" class="mono tiny" text-anchor="middle">11</text>
+  <rect x="624" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 12: ignored</title></rect>
+  <text x="636.5" y="481" class="mono tiny" text-anchor="middle">12</text>
+  <rect x="651" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 13: ignored</title></rect>
+  <text x="663.5" y="481" class="mono tiny" text-anchor="middle">13</text>
+  <rect x="678" y="424" width="25" height="38" rx="3" fill="#16a34a" stroke="#bbf7d0" stroke-width="1"><title>position 14: supervised</title></rect>
+  <text x="690.5" y="481" class="mono tiny" text-anchor="middle">14</text>
+  <rect x="705" y="424" width="25" height="38" rx="3" fill="#16a34a" stroke="#bbf7d0" stroke-width="1"><title>position 15: supervised</title></rect>
+  <text x="717.5" y="481" class="mono tiny" text-anchor="middle">15</text>
+  <rect x="732" y="424" width="25" height="38" rx="3" fill="#16a34a" stroke="#bbf7d0" stroke-width="1"><title>position 16: supervised</title></rect>
+  <text x="744.5" y="481" class="mono tiny" text-anchor="middle">16</text>
+  <rect x="759" y="424" width="25" height="38" rx="3" fill="#16a34a" stroke="#bbf7d0" stroke-width="1"><title>position 17: supervised</title></rect>
+  <text x="771.5" y="481" class="mono tiny" text-anchor="middle">17</text>
+  <rect x="786" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 18: ignored</title></rect>
+  <text x="798.5" y="481" class="mono tiny" text-anchor="middle">18</text>
+  <rect x="813" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 19: ignored</title></rect>
+  <text x="825.5" y="481" class="mono tiny" text-anchor="middle">19</text>
+  <rect x="840" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 20: ignored</title></rect>
+  <text x="852.5" y="481" class="mono tiny" text-anchor="middle">20</text>
+  <rect x="867" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 21: ignored</title></rect>
+  <text x="879.5" y="481" class="mono tiny" text-anchor="middle">21</text>
+  <rect x="894" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 22: ignored</title></rect>
+  <text x="906.5" y="481" class="mono tiny" text-anchor="middle">22</text>
+  <rect x="921" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 23: ignored</title></rect>
+  <text x="933.5" y="481" class="mono tiny" text-anchor="middle">23</text>
+  <rect x="948" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 24: ignored</title></rect>
+  <text x="960.5" y="481" class="mono tiny" text-anchor="middle">24</text>
+  <rect x="975" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 25: ignored</title></rect>
+  <text x="987.5" y="481" class="mono tiny" text-anchor="middle">25</text>
+  <rect x="1002" y="424" width="25" height="38" rx="3" fill="#16a34a" stroke="#bbf7d0" stroke-width="1"><title>position 26: supervised</title></rect>
+  <text x="1014.5" y="481" class="mono tiny" text-anchor="middle">26</text>
+  <rect x="1029" y="424" width="25" height="38" rx="3" fill="#16a34a" stroke="#bbf7d0" stroke-width="1"><title>position 27: supervised</title></rect>
+  <text x="1041.5" y="481" class="mono tiny" text-anchor="middle">27</text>
+  <rect x="1056" y="424" width="25" height="38" rx="3" fill="#16a34a" stroke="#bbf7d0" stroke-width="1"><title>position 28: supervised</title></rect>
+  <text x="1068.5" y="481" class="mono tiny" text-anchor="middle">28</text>
+  <rect x="1083" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 29: ignored</title></rect>
+  <text x="1095.5" y="481" class="mono tiny" text-anchor="middle">29</text>
+  <rect x="1110" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 30: ignored</title></rect>
+  <text x="1122.5" y="481" class="mono tiny" text-anchor="middle">30</text>
+  <rect x="1137" y="424" width="25" height="38" rx="3" fill="#dc2626" stroke="#fecaca" stroke-width="2"><title>position 31: supervised</title></rect>
+  <text x="1149.5" y="481" class="mono tiny" text-anchor="middle">31</text>
+  <rect x="1164" y="424" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 32: ignored</title></rect>
+  <text x="1176.5" y="481" class="mono tiny" text-anchor="middle">32</text>
+  <text x="1210" y="426" class="mono small">runs: [8,9), [14,18), [26,29), [31,32)</text>
+  <text x="1210" y="450" class="mono small">boundary: none</text>
+  <text x="1210" y="474" class="mono small">padding: 31</text>
+  <text x="1210" y="498" class="mono small">off-policy: 8, 31</text>
+  <text x="1210" y="522" class="mono small">missing: none</text>
+  <text x="72" y="602" class="sans label">Missing target @ 14</text>
+  <rect x="300" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 0: ignored</title></rect>
+  <text x="312.5" y="635" class="mono tiny" text-anchor="middle">0</text>
+  <rect x="327" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 1: ignored</title></rect>
+  <text x="339.5" y="635" class="mono tiny" text-anchor="middle">1</text>
+  <rect x="354" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 2: ignored</title></rect>
+  <text x="366.5" y="635" class="mono tiny" text-anchor="middle">2</text>
+  <rect x="381" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 3: ignored</title></rect>
+  <text x="393.5" y="635" class="mono tiny" text-anchor="middle">3</text>
+  <rect x="408" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 4: ignored</title></rect>
+  <text x="420.5" y="635" class="mono tiny" text-anchor="middle">4</text>
+  <rect x="435" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 5: ignored</title></rect>
+  <text x="447.5" y="635" class="mono tiny" text-anchor="middle">5</text>
+  <rect x="462" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 6: ignored</title></rect>
+  <text x="474.5" y="635" class="mono tiny" text-anchor="middle">6</text>
+  <rect x="489" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 7: ignored</title></rect>
+  <text x="501.5" y="635" class="mono tiny" text-anchor="middle">7</text>
+  <rect x="516" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 8: ignored</title></rect>
+  <text x="528.5" y="635" class="mono tiny" text-anchor="middle">8</text>
+  <rect x="543" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 9: ignored</title></rect>
+  <text x="555.5" y="635" class="mono tiny" text-anchor="middle">9</text>
+  <rect x="570" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 10: ignored</title></rect>
+  <text x="582.5" y="635" class="mono tiny" text-anchor="middle">10</text>
+  <rect x="597" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 11: ignored</title></rect>
+  <text x="609.5" y="635" class="mono tiny" text-anchor="middle">11</text>
+  <rect x="624" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 12: ignored</title></rect>
+  <text x="636.5" y="635" class="mono tiny" text-anchor="middle">12</text>
+  <rect x="651" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 13: ignored</title></rect>
+  <text x="663.5" y="635" class="mono tiny" text-anchor="middle">13</text>
+  <rect x="678" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#f59e0b" stroke-width="3"><title>position 14: ignored</title></rect>
+  <text x="690.5" y="635" class="mono tiny" text-anchor="middle">14</text>
+  <rect x="705" y="578" width="25" height="38" rx="3" fill="#16a34a" stroke="#bbf7d0" stroke-width="1"><title>position 15: supervised</title></rect>
+  <text x="717.5" y="635" class="mono tiny" text-anchor="middle">15</text>
+  <rect x="732" y="578" width="25" height="38" rx="3" fill="#16a34a" stroke="#bbf7d0" stroke-width="1"><title>position 16: supervised</title></rect>
+  <text x="744.5" y="635" class="mono tiny" text-anchor="middle">16</text>
+  <rect x="759" y="578" width="25" height="38" rx="3" fill="#16a34a" stroke="#bbf7d0" stroke-width="1"><title>position 17: supervised</title></rect>
+  <text x="771.5" y="635" class="mono tiny" text-anchor="middle">17</text>
+  <rect x="786" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 18: ignored</title></rect>
+  <text x="798.5" y="635" class="mono tiny" text-anchor="middle">18</text>
+  <rect x="813" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 19: ignored</title></rect>
+  <text x="825.5" y="635" class="mono tiny" text-anchor="middle">19</text>
+  <rect x="840" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 20: ignored</title></rect>
+  <text x="852.5" y="635" class="mono tiny" text-anchor="middle">20</text>
+  <rect x="867" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 21: ignored</title></rect>
+  <text x="879.5" y="635" class="mono tiny" text-anchor="middle">21</text>
+  <rect x="894" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 22: ignored</title></rect>
+  <text x="906.5" y="635" class="mono tiny" text-anchor="middle">22</text>
+  <rect x="921" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 23: ignored</title></rect>
+  <text x="933.5" y="635" class="mono tiny" text-anchor="middle">23</text>
+  <rect x="948" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 24: ignored</title></rect>
+  <text x="960.5" y="635" class="mono tiny" text-anchor="middle">24</text>
+  <rect x="975" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 25: ignored</title></rect>
+  <text x="987.5" y="635" class="mono tiny" text-anchor="middle">25</text>
+  <rect x="1002" y="578" width="25" height="38" rx="3" fill="#16a34a" stroke="#bbf7d0" stroke-width="1"><title>position 26: supervised</title></rect>
+  <text x="1014.5" y="635" class="mono tiny" text-anchor="middle">26</text>
+  <rect x="1029" y="578" width="25" height="38" rx="3" fill="#16a34a" stroke="#bbf7d0" stroke-width="1"><title>position 27: supervised</title></rect>
+  <text x="1041.5" y="635" class="mono tiny" text-anchor="middle">27</text>
+  <rect x="1056" y="578" width="25" height="38" rx="3" fill="#16a34a" stroke="#bbf7d0" stroke-width="1"><title>position 28: supervised</title></rect>
+  <text x="1068.5" y="635" class="mono tiny" text-anchor="middle">28</text>
+  <rect x="1083" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 29: ignored</title></rect>
+  <text x="1095.5" y="635" class="mono tiny" text-anchor="middle">29</text>
+  <rect x="1110" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 30: ignored</title></rect>
+  <text x="1122.5" y="635" class="mono tiny" text-anchor="middle">30</text>
+  <rect x="1137" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 31: ignored</title></rect>
+  <text x="1149.5" y="635" class="mono tiny" text-anchor="middle">31</text>
+  <rect x="1164" y="578" width="25" height="38" rx="3" fill="#25344a" stroke="#475569" stroke-width="1"><title>position 32: ignored</title></rect>
+  <text x="1176.5" y="635" class="mono tiny" text-anchor="middle">32</text>
+  <text x="1210" y="580" class="mono small">runs: [15,18), [26,29)</text>
+  <text x="1210" y="604" class="mono small">boundary: none</text>
+  <text x="1210" y="628" class="mono small">padding: none</text>
+  <text x="1210" y="652" class="mono small">off-policy: none</text>
+  <text x="1210" y="676" class="mono small">missing: 14</text>
+  <rect x="72" y="730" width="1456" height="54" rx="12" fill="#111f34" stroke="#64748b"/>
+  <text x="94" y="762" class="sans small">These rows prove detection behavior for deliberately altered label arrays. The CLI itself accepts traces, constructs its own valid policies, and did not receive these mutations.</text>
+  <text x="72" y="804" class="sans tiny">Fixture: healthy-multiturn · policy: assistant_only · positions are zero-based and half-open runs</text>
+</svg>

@@ -1,0 +1,242 @@
+{
+  "artifacts": [
+    {
+      "bytes": 25296,
+      "path": "docs/evidence/generated/assistant-only-fault-diagnostics.svg",
+      "sha256": "7c6c1be891d52b3691255b2284bfa0e5ea139c9277525695338b5b09f0eb5f05"
+    },
+    {
+      "bytes": 4443,
+      "path": "docs/evidence/generated/cli-session.svg",
+      "sha256": "383066ef50bccddac6cc6b8ecabf12407e858e4b5b56f80574d01df59e1892eb"
+    },
+    {
+      "bytes": 920,
+      "path": "docs/evidence/generated/cli-session.txt",
+      "sha256": "36864da3a29e2a9a3dbb1ffd8387b6a817f79cfd146ad87e2bf9f08f50d54fb7"
+    },
+    {
+      "bytes": 1625,
+      "path": "docs/evidence/generated/empty-assistant.audit.json",
+      "sha256": "7c04b2309a661b1b0e748cb2ce5948817c65630b27e4ba3131670bd21d1c54d2"
+    },
+    {
+      "bytes": 1835,
+      "path": "docs/evidence/generated/healthy.audit.json",
+      "sha256": "8e562de5355e1ec7bf516119f2174613ac48b9db5da45bcf8f5492b821c29fab"
+    },
+    {
+      "bytes": 19349,
+      "path": "docs/evidence/generated/policy-topology.svg",
+      "sha256": "9bf0e2cf531093b5d410ecd624ad5da916c8c2fb3c132bdca4f262af6e30ec9e"
+    }
+  ],
+  "cli_executions": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "loss_topology.cli",
+        "--input",
+        "input/healthy.v1.json",
+        "--output",
+        "output/healthy.audit.json"
+      ],
+      "canonical_input_sha256": "95e1dee0360f6dc45b89cbea63c781d4cc34e3fad02406a86b44145edd00a489",
+      "expected_exit_code": 0,
+      "fixture_path": "fixtures/synthetic/healthy.v1.json",
+      "fixture_raw_sha256": "f4108dc2f0db02b1e5cfd13179b598b41242855d779f3276310cb953be664791",
+      "id": "healthy",
+      "observed_exit_code": 0,
+      "output_sha256": "8e562de5355e1ec7bf516119f2174613ac48b9db5da45bcf8f5492b821c29fab",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7ba70c54a92fb961051e0eb433a947a24d9522b948024be6671eac08111843af"
+    },
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "loss_topology.cli",
+        "--input",
+        "input/empty-assistant.v1.json",
+        "--output",
+        "output/empty-assistant.audit.json"
+      ],
+      "canonical_input_sha256": "3818e9ac1fed8cb8ca9343f5306df39302b8dfb5fc02c146ce230eb89d42f569",
+      "expected_exit_code": 1,
+      "fixture_path": "fixtures/synthetic/empty-assistant.v1.json",
+      "fixture_raw_sha256": "9a8bcfc90dae4ff832f18f139dd2b2cdba86ad71133964e5a0c202ba8fda0013",
+      "id": "empty-assistant",
+      "observed_exit_code": 1,
+      "output_sha256": "7c04b2309a661b1b0e748cb2ce5948817c65630b27e4ba3131670bd21d1c54d2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "33e1b7720fff73c2edc15c7bef4a4eec564edbe29c7c94814994a5511f35ea5b"
+    }
+  ],
+  "fault_injections": [
+    {
+      "detected": {
+        "boundary_leakage_positions": [
+          12
+        ],
+        "missing_eligible_positions": [],
+        "off_policy_supervision_positions": [
+          12
+        ],
+        "padding_leakage_positions": [],
+        "supervised_runs": [
+          {
+            "end": 13,
+            "start": 12
+          },
+          {
+            "end": 18,
+            "start": 14
+          },
+          {
+            "end": 29,
+            "start": 26
+          }
+        ]
+      },
+      "execution_boundary": "public audit_label_topology in-memory; not CLI input or output",
+      "id": "boundary-leak",
+      "mutations": [
+        {
+          "action": "supervise",
+          "position": 12
+        }
+      ],
+      "policy": "assistant_only"
+    },
+    {
+      "detected": {
+        "boundary_leakage_positions": [],
+        "missing_eligible_positions": [],
+        "off_policy_supervision_positions": [
+          8,
+          31
+        ],
+        "padding_leakage_positions": [
+          31
+        ],
+        "supervised_runs": [
+          {
+            "end": 9,
+            "start": 8
+          },
+          {
+            "end": 18,
+            "start": 14
+          },
+          {
+            "end": 29,
+            "start": 26
+          },
+          {
+            "end": 32,
+            "start": 31
+          }
+        ]
+      },
+      "execution_boundary": "public audit_label_topology in-memory; not CLI input or output",
+      "id": "user-padding-leak",
+      "mutations": [
+        {
+          "action": "supervise",
+          "position": 8
+        },
+        {
+          "action": "supervise",
+          "position": 31
+        }
+      ],
+      "policy": "assistant_only"
+    },
+    {
+      "detected": {
+        "boundary_leakage_positions": [],
+        "missing_eligible_positions": [
+          14
+        ],
+        "off_policy_supervision_positions": [],
+        "padding_leakage_positions": [],
+        "supervised_runs": [
+          {
+            "end": 18,
+            "start": 15
+          },
+          {
+            "end": 29,
+            "start": 26
+          }
+        ]
+      },
+      "execution_boundary": "public audit_label_topology in-memory; not CLI input or output",
+      "id": "missing-target",
+      "mutations": [
+        {
+          "action": "ignore",
+          "position": 14
+        }
+      ],
+      "policy": "assistant_only"
+    }
+  ],
+  "kind": "loss-topology.visual-evidence-manifest",
+  "schema_version": 1,
+  "scope": {
+    "causal_shift_or_loss_computed": false,
+    "contains_personal_data": false,
+    "contains_secrets": false,
+    "faults_are_cli_inputs_or_outputs": false,
+    "fixture_class": "committed synthetic pretokenized JSON",
+    "model_or_dataset_loaded": false,
+    "network_used": false,
+    "tokenizer_executed": false,
+    "tokenizer_mapping_attested": false,
+    "trainer_imported_or_executed": false
+  },
+  "sources": [
+    {
+      "bytes": 2011,
+      "path": "fixtures/synthetic/empty-assistant.v1.json",
+      "sha256": "9a8bcfc90dae4ff832f18f139dd2b2cdba86ad71133964e5a0c202ba8fda0013"
+    },
+    {
+      "bytes": 3095,
+      "path": "fixtures/synthetic/healthy.v1.json",
+      "sha256": "f4108dc2f0db02b1e5cfd13179b598b41242855d779f3276310cb953be664791"
+    },
+    {
+      "bytes": 1121,
+      "path": "loss_topology/__init__.py",
+      "sha256": "11076d45e181fdbcca1a7291c914c966bee9ac27dd1ec7446c0a66a62b3e5713"
+    },
+    {
+      "bytes": 9365,
+      "path": "loss_topology/cli.py",
+      "sha256": "877e858626bf84d2d587539c091bb62d7107adab893a88933e4f0847d2b98e2f"
+    },
+    {
+      "bytes": 14027,
+      "path": "loss_topology/contract.py",
+      "sha256": "83fc53ae49c60ef9a63d3ee9e0c31845b7af7a6e620815e96a74ada39628c4fa"
+    },
+    {
+      "bytes": 10984,
+      "path": "loss_topology/topology.py",
+      "sha256": "dda62187b599d62c0edc51643e71d4fd8d41f44d3fa136b5811aa231a2c05901"
+    },
+    {
+      "bytes": 449,
+      "path": "pyproject.toml",
+      "sha256": "b0cbabc395e5cce7c2c9f8ccd48368a3ca883d53cfb728958d4a807686602892"
+    },
+    {
+      "bytes": 49299,
+      "path": "tools/render_loss_topology_evidence.py",
+      "sha256": "385dc72c0e2a92351afb4645d76b7f560d408062f080ee4fbdb753ef74bbac97"
+    }
+  ]
+}
