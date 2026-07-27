@@ -1,0 +1,7 @@
+{
+  "schema_version": "token-boundary-synthetic-case-v1",
+  "case_id": "normalized-away",
+  "source": "c",
+  "target": " ",
+  "max_length": 8
+}

@@ -1,0 +1,7 @@
+{
+  "schema_version": "token-boundary-synthetic-case-v1",
+  "case_id": "partial-truncation",
+  "source": "cde",
+  "target": "fghi",
+  "max_length": 6
+}

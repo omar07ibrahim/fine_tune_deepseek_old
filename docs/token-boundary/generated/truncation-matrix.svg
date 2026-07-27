@@ -1,0 +1,216 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1540" viewBox="0 0 1000 1540" role="img" aria-labelledby="matrix-title matrix-description">
+  <title id="matrix-title">Target retention across max_length</title>
+  <desc id="matrix-description">A two-panel matrix of 56 fresh CLI executions across seven authored boundary cases and max lengths two through nine. Each cell gives the primary classification and retained versus full target-token count.</desc>
+  <rect width="1000" height="1540" fill="#07111f"/>
+  <style>
+    .sans { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    .title { fill: #f8fafc; font-size: 32px; font-weight: 760; }
+    .subtitle { fill: #d7e1ee; font-size: 18px; }
+    .heading { fill: #f8fafc; font-size: 22px; font-weight: 720; }
+    .label { fill: #eef4fb; font-size: 17px; font-weight: 650; }
+    .body { fill: #d7e1ee; font-size: 16px; }
+    .small { fill: #d7e1ee; font-size: 14px; }
+    .tiny { fill: #d7e1ee; font-size: 12px; }
+    .scope { fill: #dbeafe; font-size: 14px; font-weight: 680; letter-spacing: .25px; }
+  </style>
+  <text x="46" y="60" class="sans title">Target retention across max_length</text>
+  <text x="46" y="94" class="sans subtitle">56 fresh stdin CLI executions · seven authored cases · direct labels show primary + retained/full</text>
+  <rect x="46" y="116" width="908" height="68" rx="12" fill="#10233f" stroke="#475569"/>
+  <text x="66" y="143" class="sans small">A aligned · D drift · X cross-boundary · P partial · E eliminated · ? indeterminate</text>
+  <text x="66" y="168" class="sans small">Color is redundant: every cell contains its code and exact retained/full target count.</text>
+  <text x="46" y="220" class="sans heading">max_length 2–5 · panel 1/2</text>
+  <text x="325" y="260" class="mono label" text-anchor="middle">2</text>
+  <text x="493" y="260" class="mono label" text-anchor="middle">3</text>
+  <text x="661" y="260" class="mono label" text-anchor="middle">4</text>
+  <text x="829" y="260" class="mono label" text-anchor="middle">5</text>
+  <text x="46" y="320" class="mono small">aligned</text>
+  <rect x="245" y="278" width="160" height="62" rx="9" fill="#9f1239" stroke="#cbd5e1"/>
+  <text x="325" y="305" class="mono label" text-anchor="middle">E · 0/2</text>
+  <text x="325" y="328" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="413" y="278" width="160" height="62" rx="9" fill="#a16207" stroke="#cbd5e1"/>
+  <text x="493" y="305" class="mono label" text-anchor="middle">P · 1/2</text>
+  <text x="493" y="328" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="581" y="278" width="160" height="62" rx="9" fill="#0f766e" stroke="#cbd5e1"/>
+  <text x="661" y="305" class="mono label" text-anchor="middle">A · 2/2</text>
+  <text x="661" y="328" class="mono tiny" text-anchor="middle">exit 0 · pass</text>
+  <rect x="749" y="278" width="160" height="62" rx="9" fill="#0f766e" stroke="#cbd5e1"/>
+  <text x="829" y="305" class="mono label" text-anchor="middle">A · 2/2</text>
+  <text x="829" y="328" class="mono tiny" text-anchor="middle">exit 0 · pass</text>
+  <text x="46" y="390" class="mono small">merge-cross-boundary</text>
+  <rect x="245" y="348" width="160" height="62" rx="9" fill="#7e22ce" stroke="#cbd5e1"/>
+  <text x="325" y="375" class="mono label" text-anchor="middle">X · 0/0</text>
+  <text x="325" y="398" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="413" y="348" width="160" height="62" rx="9" fill="#7e22ce" stroke="#cbd5e1"/>
+  <text x="493" y="375" class="mono label" text-anchor="middle">X · 0/0</text>
+  <text x="493" y="398" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="581" y="348" width="160" height="62" rx="9" fill="#7e22ce" stroke="#cbd5e1"/>
+  <text x="661" y="375" class="mono label" text-anchor="middle">X · 0/0</text>
+  <text x="661" y="398" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="749" y="348" width="160" height="62" rx="9" fill="#7e22ce" stroke="#cbd5e1"/>
+  <text x="829" y="375" class="mono label" text-anchor="middle">X · 0/0</text>
+  <text x="829" y="398" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <text x="46" y="460" class="mono small">nfc-cross-boundary</text>
+  <rect x="245" y="418" width="160" height="62" rx="9" fill="#7e22ce" stroke="#cbd5e1"/>
+  <text x="325" y="445" class="mono label" text-anchor="middle">X · 0/1</text>
+  <text x="325" y="468" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="413" y="418" width="160" height="62" rx="9" fill="#7e22ce" stroke="#cbd5e1"/>
+  <text x="493" y="445" class="mono label" text-anchor="middle">X · 1/1</text>
+  <text x="493" y="468" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="581" y="418" width="160" height="62" rx="9" fill="#7e22ce" stroke="#cbd5e1"/>
+  <text x="661" y="445" class="mono label" text-anchor="middle">X · 1/1</text>
+  <text x="661" y="468" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="749" y="418" width="160" height="62" rx="9" fill="#7e22ce" stroke="#cbd5e1"/>
+  <text x="829" y="445" class="mono label" text-anchor="middle">X · 1/1</text>
+  <text x="829" y="468" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <text x="46" y="530" class="mono small">normalized-away</text>
+  <rect x="245" y="488" width="160" height="62" rx="9" fill="#475569" stroke="#cbd5e1"/>
+  <text x="325" y="515" class="mono label" text-anchor="middle">? · 0/0</text>
+  <text x="325" y="538" class="mono tiny" text-anchor="middle">exit 1 · indeterminate</text>
+  <rect x="413" y="488" width="160" height="62" rx="9" fill="#475569" stroke="#cbd5e1"/>
+  <text x="493" y="515" class="mono label" text-anchor="middle">? · 0/0</text>
+  <text x="493" y="538" class="mono tiny" text-anchor="middle">exit 1 · indeterminate</text>
+  <rect x="581" y="488" width="160" height="62" rx="9" fill="#475569" stroke="#cbd5e1"/>
+  <text x="661" y="515" class="mono label" text-anchor="middle">? · 0/0</text>
+  <text x="661" y="538" class="mono tiny" text-anchor="middle">exit 1 · indeterminate</text>
+  <rect x="749" y="488" width="160" height="62" rx="9" fill="#475569" stroke="#cbd5e1"/>
+  <text x="829" y="515" class="mono label" text-anchor="middle">? · 0/0</text>
+  <text x="829" y="538" class="mono tiny" text-anchor="middle">exit 1 · indeterminate</text>
+  <text x="46" y="600" class="mono small">partial-truncation</text>
+  <rect x="245" y="558" width="160" height="62" rx="9" fill="#9f1239" stroke="#cbd5e1"/>
+  <text x="325" y="585" class="mono label" text-anchor="middle">E · 0/4</text>
+  <text x="325" y="608" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="413" y="558" width="160" height="62" rx="9" fill="#9f1239" stroke="#cbd5e1"/>
+  <text x="493" y="585" class="mono label" text-anchor="middle">E · 0/4</text>
+  <text x="493" y="608" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="581" y="558" width="160" height="62" rx="9" fill="#9f1239" stroke="#cbd5e1"/>
+  <text x="661" y="585" class="mono label" text-anchor="middle">E · 0/4</text>
+  <text x="661" y="608" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="749" y="558" width="160" height="62" rx="9" fill="#a16207" stroke="#cbd5e1"/>
+  <text x="829" y="585" class="mono label" text-anchor="middle">P · 1/4</text>
+  <text x="829" y="608" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <text x="46" y="670" class="mono small">right-strip-drift</text>
+  <rect x="245" y="628" width="160" height="62" rx="9" fill="#9f1239" stroke="#cbd5e1"/>
+  <text x="325" y="655" class="mono label" text-anchor="middle">E · 0/1</text>
+  <text x="325" y="678" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="413" y="628" width="160" height="62" rx="9" fill="#9f1239" stroke="#cbd5e1"/>
+  <text x="493" y="655" class="mono label" text-anchor="middle">E · 0/1</text>
+  <text x="493" y="678" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="581" y="628" width="160" height="62" rx="9" fill="#1d4ed8" stroke="#cbd5e1"/>
+  <text x="661" y="655" class="mono label" text-anchor="middle">D · 1/1</text>
+  <text x="661" y="678" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="749" y="628" width="160" height="62" rx="9" fill="#1d4ed8" stroke="#cbd5e1"/>
+  <text x="829" y="655" class="mono label" text-anchor="middle">D · 1/1</text>
+  <text x="829" y="678" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <text x="46" y="740" class="mono small">target-eliminated</text>
+  <rect x="245" y="698" width="160" height="62" rx="9" fill="#9f1239" stroke="#cbd5e1"/>
+  <text x="325" y="725" class="mono label" text-anchor="middle">E · 0/1</text>
+  <text x="325" y="748" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="413" y="698" width="160" height="62" rx="9" fill="#9f1239" stroke="#cbd5e1"/>
+  <text x="493" y="725" class="mono label" text-anchor="middle">E · 0/1</text>
+  <text x="493" y="748" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="581" y="698" width="160" height="62" rx="9" fill="#9f1239" stroke="#cbd5e1"/>
+  <text x="661" y="725" class="mono label" text-anchor="middle">E · 0/1</text>
+  <text x="661" y="748" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="749" y="698" width="160" height="62" rx="9" fill="#9f1239" stroke="#cbd5e1"/>
+  <text x="829" y="725" class="mono label" text-anchor="middle">E · 0/1</text>
+  <text x="829" y="748" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <text x="46" y="870" class="sans heading">max_length 6–9 · panel 2/2</text>
+  <text x="325" y="910" class="mono label" text-anchor="middle">6</text>
+  <text x="493" y="910" class="mono label" text-anchor="middle">7</text>
+  <text x="661" y="910" class="mono label" text-anchor="middle">8</text>
+  <text x="829" y="910" class="mono label" text-anchor="middle">9</text>
+  <text x="46" y="970" class="mono small">aligned</text>
+  <rect x="245" y="928" width="160" height="62" rx="9" fill="#0f766e" stroke="#cbd5e1"/>
+  <text x="325" y="955" class="mono label" text-anchor="middle">A · 2/2</text>
+  <text x="325" y="978" class="mono tiny" text-anchor="middle">exit 0 · pass</text>
+  <rect x="413" y="928" width="160" height="62" rx="9" fill="#0f766e" stroke="#cbd5e1"/>
+  <text x="493" y="955" class="mono label" text-anchor="middle">A · 2/2</text>
+  <text x="493" y="978" class="mono tiny" text-anchor="middle">exit 0 · pass</text>
+  <rect x="581" y="928" width="160" height="62" rx="9" fill="#0f766e" stroke="#cbd5e1"/>
+  <text x="661" y="955" class="mono label" text-anchor="middle">A · 2/2</text>
+  <text x="661" y="978" class="mono tiny" text-anchor="middle">exit 0 · pass</text>
+  <rect x="749" y="928" width="160" height="62" rx="9" fill="#0f766e" stroke="#cbd5e1"/>
+  <text x="829" y="955" class="mono label" text-anchor="middle">A · 2/2</text>
+  <text x="829" y="978" class="mono tiny" text-anchor="middle">exit 0 · pass</text>
+  <text x="46" y="1040" class="mono small">merge-cross-boundary</text>
+  <rect x="245" y="998" width="160" height="62" rx="9" fill="#7e22ce" stroke="#cbd5e1"/>
+  <text x="325" y="1025" class="mono label" text-anchor="middle">X · 0/0</text>
+  <text x="325" y="1048" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="413" y="998" width="160" height="62" rx="9" fill="#7e22ce" stroke="#cbd5e1"/>
+  <text x="493" y="1025" class="mono label" text-anchor="middle">X · 0/0</text>
+  <text x="493" y="1048" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="581" y="998" width="160" height="62" rx="9" fill="#7e22ce" stroke="#cbd5e1"/>
+  <text x="661" y="1025" class="mono label" text-anchor="middle">X · 0/0</text>
+  <text x="661" y="1048" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="749" y="998" width="160" height="62" rx="9" fill="#7e22ce" stroke="#cbd5e1"/>
+  <text x="829" y="1025" class="mono label" text-anchor="middle">X · 0/0</text>
+  <text x="829" y="1048" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <text x="46" y="1110" class="mono small">nfc-cross-boundary</text>
+  <rect x="245" y="1068" width="160" height="62" rx="9" fill="#7e22ce" stroke="#cbd5e1"/>
+  <text x="325" y="1095" class="mono label" text-anchor="middle">X · 1/1</text>
+  <text x="325" y="1118" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="413" y="1068" width="160" height="62" rx="9" fill="#7e22ce" stroke="#cbd5e1"/>
+  <text x="493" y="1095" class="mono label" text-anchor="middle">X · 1/1</text>
+  <text x="493" y="1118" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="581" y="1068" width="160" height="62" rx="9" fill="#7e22ce" stroke="#cbd5e1"/>
+  <text x="661" y="1095" class="mono label" text-anchor="middle">X · 1/1</text>
+  <text x="661" y="1118" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="749" y="1068" width="160" height="62" rx="9" fill="#7e22ce" stroke="#cbd5e1"/>
+  <text x="829" y="1095" class="mono label" text-anchor="middle">X · 1/1</text>
+  <text x="829" y="1118" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <text x="46" y="1180" class="mono small">normalized-away</text>
+  <rect x="245" y="1138" width="160" height="62" rx="9" fill="#475569" stroke="#cbd5e1"/>
+  <text x="325" y="1165" class="mono label" text-anchor="middle">? · 0/0</text>
+  <text x="325" y="1188" class="mono tiny" text-anchor="middle">exit 1 · indeterminate</text>
+  <rect x="413" y="1138" width="160" height="62" rx="9" fill="#475569" stroke="#cbd5e1"/>
+  <text x="493" y="1165" class="mono label" text-anchor="middle">? · 0/0</text>
+  <text x="493" y="1188" class="mono tiny" text-anchor="middle">exit 1 · indeterminate</text>
+  <rect x="581" y="1138" width="160" height="62" rx="9" fill="#475569" stroke="#cbd5e1"/>
+  <text x="661" y="1165" class="mono label" text-anchor="middle">? · 0/0</text>
+  <text x="661" y="1188" class="mono tiny" text-anchor="middle">exit 1 · indeterminate</text>
+  <rect x="749" y="1138" width="160" height="62" rx="9" fill="#475569" stroke="#cbd5e1"/>
+  <text x="829" y="1165" class="mono label" text-anchor="middle">? · 0/0</text>
+  <text x="829" y="1188" class="mono tiny" text-anchor="middle">exit 1 · indeterminate</text>
+  <text x="46" y="1250" class="mono small">partial-truncation</text>
+  <rect x="245" y="1208" width="160" height="62" rx="9" fill="#a16207" stroke="#cbd5e1"/>
+  <text x="325" y="1235" class="mono label" text-anchor="middle">P · 2/4</text>
+  <text x="325" y="1258" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="413" y="1208" width="160" height="62" rx="9" fill="#a16207" stroke="#cbd5e1"/>
+  <text x="493" y="1235" class="mono label" text-anchor="middle">P · 3/4</text>
+  <text x="493" y="1258" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="581" y="1208" width="160" height="62" rx="9" fill="#0f766e" stroke="#cbd5e1"/>
+  <text x="661" y="1235" class="mono label" text-anchor="middle">A · 4/4</text>
+  <text x="661" y="1258" class="mono tiny" text-anchor="middle">exit 0 · pass</text>
+  <rect x="749" y="1208" width="160" height="62" rx="9" fill="#0f766e" stroke="#cbd5e1"/>
+  <text x="829" y="1235" class="mono label" text-anchor="middle">A · 4/4</text>
+  <text x="829" y="1258" class="mono tiny" text-anchor="middle">exit 0 · pass</text>
+  <text x="46" y="1320" class="mono small">right-strip-drift</text>
+  <rect x="245" y="1278" width="160" height="62" rx="9" fill="#1d4ed8" stroke="#cbd5e1"/>
+  <text x="325" y="1305" class="mono label" text-anchor="middle">D · 1/1</text>
+  <text x="325" y="1328" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="413" y="1278" width="160" height="62" rx="9" fill="#1d4ed8" stroke="#cbd5e1"/>
+  <text x="493" y="1305" class="mono label" text-anchor="middle">D · 1/1</text>
+  <text x="493" y="1328" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="581" y="1278" width="160" height="62" rx="9" fill="#1d4ed8" stroke="#cbd5e1"/>
+  <text x="661" y="1305" class="mono label" text-anchor="middle">D · 1/1</text>
+  <text x="661" y="1328" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <rect x="749" y="1278" width="160" height="62" rx="9" fill="#1d4ed8" stroke="#cbd5e1"/>
+  <text x="829" y="1305" class="mono label" text-anchor="middle">D · 1/1</text>
+  <text x="829" y="1328" class="mono tiny" text-anchor="middle">exit 1 · fail</text>
+  <text x="46" y="1390" class="mono small">target-eliminated</text>
+  <rect x="245" y="1348" width="160" height="62" rx="9" fill="#0f766e" stroke="#cbd5e1"/>
+  <text x="325" y="1375" class="mono label" text-anchor="middle">A · 1/1</text>
+  <text x="325" y="1398" class="mono tiny" text-anchor="middle">exit 0 · pass</text>
+  <rect x="413" y="1348" width="160" height="62" rx="9" fill="#0f766e" stroke="#cbd5e1"/>
+  <text x="493" y="1375" class="mono label" text-anchor="middle">A · 1/1</text>
+  <text x="493" y="1398" class="mono tiny" text-anchor="middle">exit 0 · pass</text>
+  <rect x="581" y="1348" width="160" height="62" rx="9" fill="#0f766e" stroke="#cbd5e1"/>
+  <text x="661" y="1375" class="mono label" text-anchor="middle">A · 1/1</text>
+  <text x="661" y="1398" class="mono tiny" text-anchor="middle">exit 0 · pass</text>
+  <rect x="749" y="1348" width="160" height="62" rx="9" fill="#0f766e" stroke="#cbd5e1"/>
+  <text x="829" y="1375" class="mono label" text-anchor="middle">A · 1/1</text>
+  <text x="829" y="1398" class="mono tiny" text-anchor="middle">exit 0 · pass</text>
+  <text x="46" y="1480" class="sans small">This bounded sweep varies only max_length; source, target, artifact, runtime, and analysis code stay fixed.</text>
+  <text x="46" y="1504" class="sans tiny">Inspect truncation-sweep.csv for every canonical input identity, report hash, cutoff, and target count.</text>
+</svg>

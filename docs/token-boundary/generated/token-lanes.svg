@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1938" viewBox="0 0 1000 1938" role="img" aria-labelledby="lanes-title lanes-description">
+  <title id="lanes-title">Seven executed boundary differentials</title>
+  <desc id="lanes-description">Full and retained tokenizer lanes for every committed authored case, with exact token pieces, ownership, mask state, cutoff, target retention, status, and primary classification.</desc>
+  <rect width="1000" height="1938" fill="#07111f"/>
+  <style>
+    .sans { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    .title { fill: #f8fafc; font-size: 32px; font-weight: 760; }
+    .subtitle { fill: #d7e1ee; font-size: 18px; }
+    .heading { fill: #f8fafc; font-size: 22px; font-weight: 720; }
+    .label { fill: #eef4fb; font-size: 17px; font-weight: 650; }
+    .body { fill: #d7e1ee; font-size: 16px; }
+    .small { fill: #d7e1ee; font-size: 14px; }
+    .tiny { fill: #d7e1ee; font-size: 12px; }
+    .scope { fill: #dbeafe; font-size: 14px; font-weight: 680; letter-spacing: .25px; }
+  </style>
+  <text x="46" y="60" class="sans title">Seven executed boundary differentials</text>
+  <text x="46" y="94" class="sans subtitle">Exact full/retained token lanes · ownership + M(masked) / S(supervised) · positions are zero-based</text>
+  <rect x="46" y="120" width="908" height="66" rx="12" fill="#10233f" stroke="#475569"/>
+  <text x="66" y="147" class="sans small">Ownership: I injected · S source · T target · X cross-boundary · ? ambiguous</text>
+  <text x="66" y="171" class="sans small">M masked · S supervised · — not retained · [SPACE] = U+0020 · U+0301 is a display escape.</text>
+  <rect x="46" y="210" width="908" height="228" rx="14" fill="#0d1b2e" stroke="#334155"/>
+  <text x="66" y="239" class="sans label">aligned · pass · aligned</text>
+  <text x="66" y="265" class="mono tiny">authored c | de · max_length 8 · cutoff 2 / oracle 2</text>
+  <text x="66" y="308" class="sans small">full</text>
+  <rect x="255" y="277" width="77" height="58" rx="7" fill="#475569" stroke="#94a3b8" stroke-width="2"/>
+  <text x="293" y="300" class="mono small" text-anchor="middle">&lt;bos&gt;</text>
+  <text x="293" y="323" class="mono tiny" text-anchor="middle">0 · I/M</text>
+  <rect x="337" y="277" width="77" height="58" rx="7" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="375" y="300" class="mono small" text-anchor="middle">c</text>
+  <text x="375" y="323" class="mono tiny" text-anchor="middle">1 · S/M</text>
+  <rect x="419" y="277" width="77" height="58" rx="7" fill="#0f766e" stroke="#94a3b8" stroke-width="2"/>
+  <text x="457" y="300" class="mono small" text-anchor="middle">d</text>
+  <text x="457" y="323" class="mono tiny" text-anchor="middle">2 · T/S</text>
+  <rect x="501" y="277" width="77" height="58" rx="7" fill="#0f766e" stroke="#94a3b8" stroke-width="2"/>
+  <text x="539" y="300" class="mono small" text-anchor="middle">e</text>
+  <text x="539" y="323" class="mono tiny" text-anchor="middle">3 · T/S</text>
+  <text x="66" y="369" class="sans small">retained</text>
+  <rect x="255" y="338" width="77" height="58" rx="7" fill="#475569" stroke="#94a3b8" stroke-width="2"/>
+  <text x="293" y="361" class="mono small" text-anchor="middle">&lt;bos&gt;</text>
+  <text x="293" y="384" class="mono tiny" text-anchor="middle">0 · I/M</text>
+  <rect x="337" y="338" width="77" height="58" rx="7" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="375" y="361" class="mono small" text-anchor="middle">c</text>
+  <text x="375" y="384" class="mono tiny" text-anchor="middle">1 · S/M</text>
+  <rect x="419" y="338" width="77" height="58" rx="7" fill="#0f766e" stroke="#94a3b8" stroke-width="2"/>
+  <text x="457" y="361" class="mono small" text-anchor="middle">d</text>
+  <text x="457" y="384" class="mono tiny" text-anchor="middle">2 · T/S</text>
+  <rect x="501" y="338" width="77" height="58" rx="7" fill="#0f766e" stroke="#94a3b8" stroke-width="2"/>
+  <text x="539" y="361" class="mono small" text-anchor="middle">e</text>
+  <text x="539" y="384" class="mono tiny" text-anchor="middle">3 · T/S</text>
+  <text x="66" y="424" class="sans tiny">target retained/full 2/2 · truncated 0 · report 49f851a6d89d…</text>
+  <rect x="46" y="454" width="908" height="228" rx="14" fill="#0d1b2e" stroke="#334155"/>
+  <text x="66" y="483" class="sans label">merge-cross-boundary · fail · cross_boundary_token</text>
+  <text x="66" y="509" class="mono tiny">authored a | b · max_length 8 · cutoff 2 / oracle n/a</text>
+  <text x="66" y="552" class="sans small">full</text>
+  <rect x="255" y="521" width="77" height="58" rx="7" fill="#475569" stroke="#94a3b8" stroke-width="2"/>
+  <text x="293" y="544" class="mono small" text-anchor="middle">&lt;bos&gt;</text>
+  <text x="293" y="567" class="mono tiny" text-anchor="middle">0 · I/M</text>
+  <rect x="337" y="521" width="77" height="58" rx="7" fill="#9333ea" stroke="#f59e0b" stroke-width="2"/>
+  <text x="375" y="544" class="mono small" text-anchor="middle">ab</text>
+  <text x="375" y="567" class="mono tiny" text-anchor="middle">1 · X/M</text>
+  <text x="66" y="613" class="sans small">retained</text>
+  <rect x="255" y="582" width="77" height="58" rx="7" fill="#475569" stroke="#94a3b8" stroke-width="2"/>
+  <text x="293" y="605" class="mono small" text-anchor="middle">&lt;bos&gt;</text>
+  <text x="293" y="628" class="mono tiny" text-anchor="middle">0 · I/M</text>
+  <rect x="337" y="582" width="77" height="58" rx="7" fill="#9333ea" stroke="#f59e0b" stroke-width="2"/>
+  <text x="375" y="605" class="mono small" text-anchor="middle">ab</text>
+  <text x="375" y="628" class="mono tiny" text-anchor="middle">1 · X/M</text>
+  <text x="66" y="668" class="sans tiny">target retained/full 0/0 · truncated 0 · report b4c7364274c4…</text>
+  <rect x="46" y="698" width="908" height="228" rx="14" fill="#0d1b2e" stroke="#334155"/>
+  <text x="66" y="727" class="sans label">nfc-cross-boundary · fail · cross_boundary_token</text>
+  <text x="66" y="753" class="mono tiny">authored e | U+0301x · max_length 8 · cutoff 2 / oracle 2</text>
+  <text x="66" y="796" class="sans small">full</text>
+  <rect x="255" y="765" width="77" height="58" rx="7" fill="#475569" stroke="#94a3b8" stroke-width="2"/>
+  <text x="293" y="788" class="mono small" text-anchor="middle">&lt;bos&gt;</text>
+  <text x="293" y="811" class="mono tiny" text-anchor="middle">0 · I/M</text>
+  <rect x="337" y="765" width="77" height="58" rx="7" fill="#9333ea" stroke="#f59e0b" stroke-width="2"/>
+  <text x="375" y="788" class="mono small" text-anchor="middle">é</text>
+  <text x="375" y="811" class="mono tiny" text-anchor="middle">1 · X/M</text>
+  <rect x="419" y="765" width="77" height="58" rx="7" fill="#0f766e" stroke="#94a3b8" stroke-width="2"/>
+  <text x="457" y="788" class="mono small" text-anchor="middle">x</text>
+  <text x="457" y="811" class="mono tiny" text-anchor="middle">2 · T/S</text>
+  <text x="66" y="857" class="sans small">retained</text>
+  <rect x="255" y="826" width="77" height="58" rx="7" fill="#475569" stroke="#94a3b8" stroke-width="2"/>
+  <text x="293" y="849" class="mono small" text-anchor="middle">&lt;bos&gt;</text>
+  <text x="293" y="872" class="mono tiny" text-anchor="middle">0 · I/M</text>
+  <rect x="337" y="826" width="77" height="58" rx="7" fill="#9333ea" stroke="#f59e0b" stroke-width="2"/>
+  <text x="375" y="849" class="mono small" text-anchor="middle">é</text>
+  <text x="375" y="872" class="mono tiny" text-anchor="middle">1 · X/M</text>
+  <rect x="419" y="826" width="77" height="58" rx="7" fill="#0f766e" stroke="#94a3b8" stroke-width="2"/>
+  <text x="457" y="849" class="mono small" text-anchor="middle">x</text>
+  <text x="457" y="872" class="mono tiny" text-anchor="middle">2 · T/S</text>
+  <text x="66" y="912" class="sans tiny">target retained/full 1/1 · truncated 0 · report 1aeec08efe81…</text>
+  <rect x="46" y="942" width="908" height="228" rx="14" fill="#0d1b2e" stroke="#334155"/>
+  <text x="66" y="971" class="sans label">normalized-away · indeterminate · indeterminate</text>
+  <text x="66" y="997" class="mono tiny">authored c | [SPACE] · max_length 8 · cutoff 2 / oracle n/a</text>
+  <text x="66" y="1040" class="sans small">full</text>
+  <rect x="255" y="1009" width="77" height="58" rx="7" fill="#475569" stroke="#94a3b8" stroke-width="2"/>
+  <text x="293" y="1032" class="mono small" text-anchor="middle">&lt;bos&gt;</text>
+  <text x="293" y="1055" class="mono tiny" text-anchor="middle">0 · I/M</text>
+  <rect x="337" y="1009" width="77" height="58" rx="7" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="375" y="1032" class="mono small" text-anchor="middle">c</text>
+  <text x="375" y="1055" class="mono tiny" text-anchor="middle">1 · S/M</text>
+  <text x="66" y="1101" class="sans small">retained</text>
+  <rect x="255" y="1070" width="77" height="58" rx="7" fill="#475569" stroke="#94a3b8" stroke-width="2"/>
+  <text x="293" y="1093" class="mono small" text-anchor="middle">&lt;bos&gt;</text>
+  <text x="293" y="1116" class="mono tiny" text-anchor="middle">0 · I/M</text>
+  <rect x="337" y="1070" width="77" height="58" rx="7" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="375" y="1093" class="mono small" text-anchor="middle">c</text>
+  <text x="375" y="1116" class="mono tiny" text-anchor="middle">1 · S/M</text>
+  <text x="66" y="1156" class="sans tiny">target retained/full 0/0 · truncated 0 · report ef5b1e1ced06…</text>
+  <rect x="46" y="1186" width="908" height="228" rx="14" fill="#0d1b2e" stroke="#334155"/>
+  <text x="66" y="1215" class="sans label">partial-truncation · fail · partial_target_truncation</text>
+  <text x="66" y="1241" class="mono tiny">authored cde | fghi · max_length 6 · cutoff 4 / oracle 4</text>
+  <text x="66" y="1284" class="sans small">full</text>
+  <rect x="255" y="1253" width="76" height="58" rx="7" fill="#475569" stroke="#94a3b8" stroke-width="2"/>
+  <text x="293" y="1276" class="mono small" text-anchor="middle">&lt;bos&gt;</text>
+  <text x="293" y="1299" class="mono tiny" text-anchor="middle">0 · I/M</text>
+  <rect x="336" y="1253" width="76" height="58" rx="7" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="374" y="1276" class="mono small" text-anchor="middle">c</text>
+  <text x="374" y="1299" class="mono tiny" text-anchor="middle">1 · S/M</text>
+  <rect x="417" y="1253" width="76" height="58" rx="7" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="455" y="1276" class="mono small" text-anchor="middle">d</text>
+  <text x="455" y="1299" class="mono tiny" text-anchor="middle">2 · S/M</text>
+  <rect x="498" y="1253" width="76" height="58" rx="7" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="536" y="1276" class="mono small" text-anchor="middle">e</text>
+  <text x="536" y="1299" class="mono tiny" text-anchor="middle">3 · S/M</text>
+  <rect x="579" y="1253" width="76" height="58" rx="7" fill="#0f766e" stroke="#94a3b8" stroke-width="2"/>
+  <text x="617" y="1276" class="mono small" text-anchor="middle">f</text>
+  <text x="617" y="1299" class="mono tiny" text-anchor="middle">4 · T/S</text>
+  <rect x="660" y="1253" width="76" height="58" rx="7" fill="#0f766e" stroke="#94a3b8" stroke-width="2"/>
+  <text x="698" y="1276" class="mono small" text-anchor="middle">g</text>
+  <text x="698" y="1299" class="mono tiny" text-anchor="middle">5 · T/S</text>
+  <rect x="741" y="1253" width="76" height="58" rx="7" fill="#0f766e" stroke="#94a3b8" stroke-width="2"/>
+  <text x="779" y="1276" class="mono small" text-anchor="middle">h</text>
+  <text x="779" y="1299" class="mono tiny" text-anchor="middle">6 · T/—</text>
+  <rect x="822" y="1253" width="76" height="58" rx="7" fill="#0f766e" stroke="#94a3b8" stroke-width="2"/>
+  <text x="860" y="1276" class="mono small" text-anchor="middle">i</text>
+  <text x="860" y="1299" class="mono tiny" text-anchor="middle">7 · T/—</text>
+  <text x="66" y="1345" class="sans small">retained</text>
+  <rect x="255" y="1314" width="77" height="58" rx="7" fill="#475569" stroke="#94a3b8" stroke-width="2"/>
+  <text x="293" y="1337" class="mono small" text-anchor="middle">&lt;bos&gt;</text>
+  <text x="293" y="1360" class="mono tiny" text-anchor="middle">0 · I/M</text>
+  <rect x="337" y="1314" width="77" height="58" rx="7" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="375" y="1337" class="mono small" text-anchor="middle">c</text>
+  <text x="375" y="1360" class="mono tiny" text-anchor="middle">1 · S/M</text>
+  <rect x="419" y="1314" width="77" height="58" rx="7" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="457" y="1337" class="mono small" text-anchor="middle">d</text>
+  <text x="457" y="1360" class="mono tiny" text-anchor="middle">2 · S/M</text>
+  <rect x="501" y="1314" width="77" height="58" rx="7" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="539" y="1337" class="mono small" text-anchor="middle">e</text>
+  <text x="539" y="1360" class="mono tiny" text-anchor="middle">3 · S/M</text>
+  <rect x="583" y="1314" width="77" height="58" rx="7" fill="#0f766e" stroke="#94a3b8" stroke-width="2"/>
+  <text x="621" y="1337" class="mono small" text-anchor="middle">f</text>
+  <text x="621" y="1360" class="mono tiny" text-anchor="middle">4 · T/S</text>
+  <rect x="665" y="1314" width="77" height="58" rx="7" fill="#0f766e" stroke="#94a3b8" stroke-width="2"/>
+  <text x="703" y="1337" class="mono small" text-anchor="middle">g</text>
+  <text x="703" y="1360" class="mono tiny" text-anchor="middle">5 · T/S</text>
+  <text x="66" y="1400" class="sans tiny">target retained/full 2/4 · truncated 2 · report 35186327542c…</text>
+  <rect x="46" y="1430" width="908" height="228" rx="14" fill="#0d1b2e" stroke="#334155"/>
+  <text x="66" y="1459" class="sans label">right-strip-drift · fail · boundary_drift</text>
+  <text x="66" y="1485" class="mono tiny">authored c[SPACE] | d · max_length 8 · cutoff 2 / oracle 3</text>
+  <text x="66" y="1528" class="sans small">full</text>
+  <rect x="255" y="1497" width="77" height="58" rx="7" fill="#475569" stroke="#94a3b8" stroke-width="2"/>
+  <text x="293" y="1520" class="mono small" text-anchor="middle">&lt;bos&gt;</text>
+  <text x="293" y="1543" class="mono tiny" text-anchor="middle">0 · I/M</text>
+  <rect x="337" y="1497" width="77" height="58" rx="7" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="375" y="1520" class="mono small" text-anchor="middle">c</text>
+  <text x="375" y="1543" class="mono tiny" text-anchor="middle">1 · S/M</text>
+  <rect x="419" y="1497" width="77" height="58" rx="7" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="457" y="1520" class="mono small" text-anchor="middle">SPACE</text>
+  <text x="457" y="1543" class="mono tiny" text-anchor="middle">2 · S/S</text>
+  <rect x="501" y="1497" width="77" height="58" rx="7" fill="#0f766e" stroke="#94a3b8" stroke-width="2"/>
+  <text x="539" y="1520" class="mono small" text-anchor="middle">d</text>
+  <text x="539" y="1543" class="mono tiny" text-anchor="middle">3 · T/S</text>
+  <text x="66" y="1589" class="sans small">retained</text>
+  <rect x="255" y="1558" width="77" height="58" rx="7" fill="#475569" stroke="#94a3b8" stroke-width="2"/>
+  <text x="293" y="1581" class="mono small" text-anchor="middle">&lt;bos&gt;</text>
+  <text x="293" y="1604" class="mono tiny" text-anchor="middle">0 · I/M</text>
+  <rect x="337" y="1558" width="77" height="58" rx="7" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="375" y="1581" class="mono small" text-anchor="middle">c</text>
+  <text x="375" y="1604" class="mono tiny" text-anchor="middle">1 · S/M</text>
+  <rect x="419" y="1558" width="77" height="58" rx="7" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="457" y="1581" class="mono small" text-anchor="middle">SPACE</text>
+  <text x="457" y="1604" class="mono tiny" text-anchor="middle">2 · S/S</text>
+  <rect x="501" y="1558" width="77" height="58" rx="7" fill="#0f766e" stroke="#94a3b8" stroke-width="2"/>
+  <text x="539" y="1581" class="mono small" text-anchor="middle">d</text>
+  <text x="539" y="1604" class="mono tiny" text-anchor="middle">3 · T/S</text>
+  <text x="66" y="1644" class="sans tiny">target retained/full 1/1 · truncated 0 · report ffe7b5194512…</text>
+  <rect x="46" y="1674" width="908" height="228" rx="14" fill="#0d1b2e" stroke="#334155"/>
+  <text x="66" y="1703" class="sans label">target-eliminated · fail · target_eliminated</text>
+  <text x="66" y="1729" class="mono tiny">authored cdef | g · max_length 5 · cutoff 5 / oracle n/a</text>
+  <text x="66" y="1772" class="sans small">full</text>
+  <rect x="255" y="1741" width="77" height="58" rx="7" fill="#475569" stroke="#94a3b8" stroke-width="2"/>
+  <text x="293" y="1764" class="mono small" text-anchor="middle">&lt;bos&gt;</text>
+  <text x="293" y="1787" class="mono tiny" text-anchor="middle">0 · I/M</text>
+  <rect x="337" y="1741" width="77" height="58" rx="7" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="375" y="1764" class="mono small" text-anchor="middle">c</text>
+  <text x="375" y="1787" class="mono tiny" text-anchor="middle">1 · S/M</text>
+  <rect x="419" y="1741" width="77" height="58" rx="7" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="457" y="1764" class="mono small" text-anchor="middle">d</text>
+  <text x="457" y="1787" class="mono tiny" text-anchor="middle">2 · S/M</text>
+  <rect x="501" y="1741" width="77" height="58" rx="7" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="539" y="1764" class="mono small" text-anchor="middle">e</text>
+  <text x="539" y="1787" class="mono tiny" text-anchor="middle">3 · S/M</text>
+  <rect x="583" y="1741" width="77" height="58" rx="7" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="621" y="1764" class="mono small" text-anchor="middle">f</text>
+  <text x="621" y="1787" class="mono tiny" text-anchor="middle">4 · S/M</text>
+  <rect x="665" y="1741" width="77" height="58" rx="7" fill="#0f766e" stroke="#94a3b8" stroke-width="2"/>
+  <text x="703" y="1764" class="mono small" text-anchor="middle">g</text>
+  <text x="703" y="1787" class="mono tiny" text-anchor="middle">5 · T/—</text>
+  <text x="66" y="1833" class="sans small">retained</text>
+  <rect x="255" y="1802" width="77" height="58" rx="7" fill="#475569" stroke="#94a3b8" stroke-width="2"/>
+  <text x="293" y="1825" class="mono small" text-anchor="middle">&lt;bos&gt;</text>
+  <text x="293" y="1848" class="mono tiny" text-anchor="middle">0 · I/M</text>
+  <rect x="337" y="1802" width="77" height="58" rx="7" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="375" y="1825" class="mono small" text-anchor="middle">c</text>
+  <text x="375" y="1848" class="mono tiny" text-anchor="middle">1 · S/M</text>
+  <rect x="419" y="1802" width="77" height="58" rx="7" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="457" y="1825" class="mono small" text-anchor="middle">d</text>
+  <text x="457" y="1848" class="mono tiny" text-anchor="middle">2 · S/M</text>
+  <rect x="501" y="1802" width="77" height="58" rx="7" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="539" y="1825" class="mono small" text-anchor="middle">e</text>
+  <text x="539" y="1848" class="mono tiny" text-anchor="middle">3 · S/M</text>
+  <rect x="583" y="1802" width="77" height="58" rx="7" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="621" y="1825" class="mono small" text-anchor="middle">f</text>
+  <text x="621" y="1848" class="mono tiny" text-anchor="middle">4 · S/M</text>
+  <text x="66" y="1888" class="sans tiny">target retained/full 0/1 · truncated 1 · report d5c2121a2296…</text>
+</svg>

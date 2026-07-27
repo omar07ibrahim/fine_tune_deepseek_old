@@ -1,0 +1,7 @@
+{
+  "schema_version": "token-boundary-synthetic-case-v1",
+  "case_id": "aligned",
+  "source": "c",
+  "target": "de",
+  "max_length": 8
+}
