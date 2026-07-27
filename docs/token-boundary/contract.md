@@ -1,8 +1,8 @@
 # Token-boundary differential contract
 
 Status: the version-1 input, local tokenizer artifact, normalization oracle,
-and executable differential report are implemented. The stdin CLI and visual
-evidence bundle remain separate commits.
+executable differential report, and stdin-only CLI are implemented. The visual
+evidence bundle remains a separate commit.
 
 ## Audited heuristic
 
@@ -125,6 +125,35 @@ result is `indeterminate`; the lab does not guess ownership.
 Reports omit the raw `source` and `target`. They contain only the case identity
 and hash, bounded counts, exact synthetic token facts, classifications, and
 explicit scope flags.
+
+## Process boundary
+
+`token-boundary-audit` accepts no arguments, paths, URLs, artifact identifiers,
+or environment-selected inputs. It reads one case from standard input, rejects
+an interactive TTY and non-file/non-pipe descriptors, and stops after at most
+32 KiB plus one sentinel byte. Regular files are read until EOF or that
+sentinel. FIFO and anonymous-pipe reads share one five-second deadline, so a
+writer cannot keep the audit process blocked indefinitely.
+
+For every valid case, stdout is exactly the canonical one-line report and
+stderr is empty. Exit status is:
+
+| Exit | Meaning |
+|---:|---|
+| `0` | valid `aligned` report |
+| `1` | valid non-pass report, including fail or indeterminate |
+| `2` | argument, interruption, input-contract, artifact, runtime, report, or process-boundary error |
+
+Exit-2 failures write one canonical, path-free error document to stderr and do
+not begin writing a report to stdout. Only explicitly allowlisted upstream
+error codes may cross the process boundary. Short writes and interrupted reads
+are retried; stalled reads time out. Read, write, broken-pipe, and unexpected
+internal exception text is never serialized.
+
+The report is built completely before the first stdout write. A downstream
+transport failure may still leave a partial report because canonical reports
+can exceed the operating system's atomic pipe-write limit; that unavoidable
+case exits `2` with `io.stdout_unavailable`.
 
 ## Scope
 
