@@ -1,8 +1,8 @@
 # Token-boundary differential contract
 
 Status: the version-1 input, local tokenizer artifact, normalization oracle,
-executable differential report, and stdin-only CLI are implemented. The visual
-evidence bundle remains a separate commit.
+executable differential report, stdin-only CLI, and reproducible visual
+evidence bundle are implemented.
 
 ## Audited heuristic
 

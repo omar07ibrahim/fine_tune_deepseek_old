@@ -46,25 +46,27 @@ The report preserves:
 - elimination causes;
 - all classification codes plus primary precedence;
 - artifact, runtime, and canonical input identities;
-- the exact standalone-source cutoff algorithm identifier; the later evidence
+- the exact standalone-source cutoff algorithm identifier; the evidence
   manifest binds that algorithm to the attested inherited source identity;
 - explicit false capability and outcome claims.
 
 The NFC example uses the reference provenance replay described in the contract,
 not a claim that raw runtime offsets alone expose every combining code point.
 
-## Evidence plan
+## Executed evidence
 
-The later evidence generator will execute the public CLI for all seven
-fixtures, bind each canonical report and raw path-free transcript, and render:
+The evidence generator executes the public CLI for all seven fixtures, binds
+each canonical report and the absolute/private-path-free transcript, and
+renders:
 
 1. token lanes with the true authored boundary, inherited cutoff, ownership,
    mask, and exact leak/cross positions;
 2. a normalization/merge mechanism view built from the executed encodings;
-3. a truncation matrix recomputed over bounded maximum lengths;
+3. a 56-cell truncation matrix recomputed over `max_length` 2 through 9;
 4. an accessible SVG rendering of the genuine CLI session.
 
-All artifacts will be synthetic, self-contained, checksum-bound, reproducible,
-and inspected at full and narrow browser widths. A GIF is not planned because
-the workflow is deterministic and non-interactive; exact lanes and a raw
-transcript are more reviewable evidence.
+All artifacts are synthetic, self-contained, checksum-bound, reproducible, and
+covered by exact-inventory tests. A GIF is intentionally omitted because the
+workflow is deterministic and non-interactive; exact lanes, CSV data, canonical
+reports, and the full transcript are more reviewable evidence. See
+`docs/token-boundary/evidence.md` for the source allowlist and claim boundary.
