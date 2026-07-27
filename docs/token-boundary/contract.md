@@ -1,7 +1,8 @@
 # Token-boundary differential contract
 
-Status: the version-1 input and local tokenizer artifacts are specified here.
-The executable engine, CLI, reports, and evidence bundle are separate commits.
+Status: the version-1 input, local tokenizer artifact, normalization oracle,
+and executable differential report are implemented. The stdin CLI and visual
+evidence bundle remain separate commits.
 
 ## Audited heuristic
 
@@ -20,7 +21,7 @@ Prefix invariance is not a general tokenizer guarantee. Normalization,
 cross-boundary subword merges, injected special tokens, and independent
 truncation can change the relationship between the two encodings.
 
-The lab will reproduce that exact length-based cutoff over a locally authored
+The lab reproduces that exact length-based cutoff over a locally authored
 synthetic tokenizer. It will not import or execute the inherited trainer.
 
 ## Input document

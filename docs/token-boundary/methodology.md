@@ -20,7 +20,7 @@ production corpus, model impact, or DeepSeek-specific behavior.
 
 ## Three encodings per case
 
-The engine will create a fresh tokenizer instance for each encoding mode:
+The engine creates a fresh tokenizer instance for each encoding mode:
 
 1. truncated `source`;
 2. untruncated `source + target`;
@@ -34,7 +34,7 @@ indeterminate.
 
 ## Diagnostics
 
-The report will preserve:
+The report preserves:
 
 - the three exact encoding vectors;
 - the inherited cutoff and supervised positions;
@@ -45,7 +45,9 @@ The report will preserve:
 - truncated target-token count;
 - elimination causes;
 - all classification codes plus primary precedence;
-- artifact, runtime, input, and attested-source identities;
+- artifact, runtime, and canonical input identities;
+- the exact standalone-source cutoff algorithm identifier; the later evidence
+  manifest binds that algorithm to the attested inherited source identity;
 - explicit false capability and outcome claims.
 
 The NFC example uses the reference provenance replay described in the contract,
