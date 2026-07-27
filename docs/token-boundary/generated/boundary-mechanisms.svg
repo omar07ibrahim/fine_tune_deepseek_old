@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1230" viewBox="0 0 1000 1230" role="img" aria-labelledby="mechanisms-title mechanisms-description">
+  <title id="mechanisms-title">How independent tokenization shifts a boundary</title>
+  <desc id="mechanisms-description">Four source-derived panels show an executed BPE merge, NFC composition, right-strip context drift, and a target removed by normalization.</desc>
+  <rect width="1000" height="1230" fill="#07111f"/>
+  <style>
+    .sans { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    .title { fill: #f8fafc; font-size: 32px; font-weight: 760; }
+    .subtitle { fill: #d7e1ee; font-size: 18px; }
+    .heading { fill: #f8fafc; font-size: 22px; font-weight: 720; }
+    .label { fill: #eef4fb; font-size: 17px; font-weight: 650; }
+    .body { fill: #d7e1ee; font-size: 16px; }
+    .small { fill: #d7e1ee; font-size: 14px; }
+    .tiny { fill: #d7e1ee; font-size: 12px; }
+    .scope { fill: #dbeafe; font-size: 14px; font-weight: 680; letter-spacing: .25px; }
+  </style>
+  <text x="46" y="60" class="sans title">How independent tokenization shifts a boundary</text>
+  <text x="46" y="94" class="sans subtitle">Four executed mechanisms · raw authored boundary shown with |</text>
+  <rect x="46" y="130" width="908" height="242" rx="16" fill="#0d1b2e" stroke="#9333ea" stroke-width="2"/>
+  <text x="72" y="170" class="sans heading">BPE merge across boundary</text>
+  <rect x="72" y="188" width="856" height="50" rx="10" fill="#111f34" stroke="#475569"/>
+  <text x="500" y="221" class="mono heading" text-anchor="middle">a | b</text>
+  <text x="72" y="270" class="mono body">standalone: &lt;bos&gt; a</text>
+  <text x="72" y="302" class="mono body">combined: &lt;bos&gt; ab</text>
+  <text x="72" y="341" class="sans label">token 1 owns origins [0,1] → cross_boundary; legacy cutoff 2 masks it</text>
+  <rect x="46" y="388" width="908" height="242" rx="16" fill="#0d1b2e" stroke="#7c3aed" stroke-width="2"/>
+  <text x="72" y="428" class="sans heading">NFC composition across boundary</text>
+  <rect x="72" y="446" width="856" height="50" rx="10" fill="#111f34" stroke="#475569"/>
+  <text x="500" y="479" class="mono heading" text-anchor="middle">e | U+0301x</text>
+  <text x="72" y="528" class="mono body">standalone: &lt;bos&gt; e</text>
+  <text x="72" y="560" class="mono body">combined: &lt;bos&gt; é x</text>
+  <text x="72" y="599" class="sans label">normalized output 0 and token 1 own origins [0,1]; x remains target</text>
+  <rect x="46" y="646" width="908" height="242" rx="16" fill="#0d1b2e" stroke="#2563eb" stroke-width="2"/>
+  <text x="72" y="686" class="sans heading">Right-strip context drift</text>
+  <rect x="72" y="704" width="856" height="50" rx="10" fill="#111f34" stroke="#475569"/>
+  <text x="500" y="737" class="mono heading" text-anchor="middle">c SPACE | d</text>
+  <text x="72" y="786" class="mono body">standalone right-strip: c SPACE → c</text>
+  <text x="72" y="818" class="mono body">combined: SPACE is internal → &lt;bos&gt; c SPACE d</text>
+  <text x="72" y="857" class="sans label">legacy cutoff 2 vs oracle 3 → source token 2 is supervised</text>
+  <rect x="46" y="904" width="908" height="242" rx="16" fill="#0d1b2e" stroke="#b45309" stroke-width="2"/>
+  <text x="72" y="944" class="sans heading">Target normalized away</text>
+  <rect x="72" y="962" width="856" height="50" rx="10" fill="#111f34" stroke="#475569"/>
+  <text x="500" y="995" class="mono heading" text-anchor="middle">c | SPACE</text>
+  <text x="72" y="1044" class="mono body">combined right-strip removes one trailing normalized code point</text>
+  <text x="72" y="1076" class="mono body">combined tokens: &lt;bos&gt; c</text>
+  <text x="72" y="1115" class="sans label">0 attributable target tokens → indeterminate, not an aligned pass</text>
+  <text x="46" y="1180" class="sans small">Counts, pieces, raw origins, cutoffs, and reasons come from the seven canonical CLI reports.</text>
+  <text x="46" y="1212" class="sans tiny">These authored cases isolate mechanisms; they do not measure production prevalence or model impact.</text>
+</svg>
