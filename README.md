@@ -1,5 +1,7 @@
 # LossTopology Lab
 
+[![Verify](https://github.com/omar07ibrahim/fine_tune_deepseek_old/actions/workflows/verify.yml/badge.svg?branch=ci%2Fhosted-reproducibility)](https://github.com/omar07ibrahim/fine_tune_deepseek_old/actions/workflows/verify.yml)
+
 > **Rehabilitation status:** provenance-bound, CPU-runnable loss-topology and
 > tokenizer-boundary audit lab. The inherited trainer remains quarantined and
 > is not a supported entry point. This repository makes no claim about a
@@ -49,6 +51,26 @@ keeps those bytes unchanged and does not obscure their repository history:
 
 They are retained for provenance inspection only. Tests and verification never
 import or execute `finetune.py`.
+
+
+## Hosted reproducibility
+
+The pinned [`Verify`](.github/workflows/verify.yml) workflow keeps the two trust
+boundaries separate and runs every check from a clean hosted checkout:
+
+| Gate | Runtime | Clean-runner proof |
+|---|---|---|
+| Standard-library matrix | CPython 3.11, 3.12, 3.13, and 3.14; no optional tokenizer runtime | Locked identities for all 3 inherited files; 225 tests with 22 explicit optional-runtime skips on each interpreter; fresh byte checks for the 7-file LossTopology evidence bundle |
+| Token-boundary runtime | CPython 3.12 and exact `tokenizers==0.21.4` | Wheel built from a `git archive`, installed entry points exercised outside the checkout, `pip check`, 225 tests with 2 explicit base-install skips, 7 real CLI cases, 56 executed sweep cells, and fresh byte checks for 5 SVGs plus their reports, transcript, CSV, and manifest |
+| Checkout invariant | Both gates | Evidence verification must leave `git status --short` empty |
+
+Dependency provisioning may access GitHub and the configured Python package
+index. The provenance verifier, audit CLIs, and evidence executions themselves
+remain local and do not fetch a model, tokenizer, dataset, or upstream source.
+Neither hosted gate imports or executes the quarantined `finetune.py` or installs
+the inherited `requirements.txt`; isolation tests may only parse or attest those
+historical bytes.
+
 
 ## Verify the snapshot
 
@@ -251,6 +273,21 @@ and [target eliminated](docs/token-boundary/generated/target-eliminated.boundary
 remain directly inspectable. See the
 [token-boundary evidence contract](docs/token-boundary/evidence.md) for the
 source allowlist, deterministic publication rules, and claim boundary.
+
+
+### Visual evidence maintenance
+
+The eight SVGs embedded in this README are source-generated views of executed
+synthetic cases, not hand-authored result mockups. Their generators also retain
+the underlying canonical JSON, CSV, and raw CLI text, while the manifests bind
+source and artifact identities and record that the fixtures contain no secrets
+or personal data.
+
+A change that affects a contract, CLI, runtime result, or renderer must update
+its complete bundle with the corresponding `--write` command, include the raw
+outputs and visuals in the same commit, and pass `--check` plus the full test
+suite. Hosted CI reconstructs both inventories and rejects stale, missing, or
+extra evidence files byte for byte.
 
 ## Provenance and license boundary
 
