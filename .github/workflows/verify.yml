@@ -64,7 +64,7 @@ jobs:
       - name: Confirm verification left the checkout clean
         run: test -z "$(git status --short)"
 
-tokenizer:
+  tokenizer:
     name: Token-boundary gate (Python 3.12)
     runs-on: ubuntu-24.04
     timeout-minutes: 15
