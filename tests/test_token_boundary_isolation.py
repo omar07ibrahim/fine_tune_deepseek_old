@@ -277,15 +277,27 @@ class TokenBoundaryIsolationTests(unittest.TestCase):
             node for node in assignments if _assigned_name(node) == "legacy_cutoff"
         )
 
-        self.assertEqual(
-            ast.dump(cutoff.value, include_attributes=False),
-            (
-                "Call(func=Name(id='len', ctx=Load()), "
-                "args=[Attribute(value=Attribute(value=Name(id='source_capture', "
-                "ctx=Load()), attr='snapshot', ctx=Load()), attr='ids', ctx=Load())], "
-                "keywords=[])"
-            ),
-        )
+        self.assertIsInstance(cutoff.value, ast.Call)
+        assert isinstance(cutoff.value, ast.Call)
+        self.assertIsInstance(cutoff.value.func, ast.Name)
+        assert isinstance(cutoff.value.func, ast.Name)
+        self.assertEqual(cutoff.value.func.id, "len")
+        self.assertEqual(cutoff.value.keywords, [])
+        self.assertEqual(len(cutoff.value.args), 1)
+
+        ids = cutoff.value.args[0]
+        self.assertIsInstance(ids, ast.Attribute)
+        assert isinstance(ids, ast.Attribute)
+        self.assertEqual(ids.attr, "ids")
+        self.assertIsInstance(ids.ctx, ast.Load)
+        self.assertIsInstance(ids.value, ast.Attribute)
+        assert isinstance(ids.value, ast.Attribute)
+        self.assertEqual(ids.value.attr, "snapshot")
+        self.assertIsInstance(ids.value.ctx, ast.Load)
+        self.assertIsInstance(ids.value.value, ast.Name)
+        assert isinstance(ids.value.value, ast.Name)
+        self.assertEqual(ids.value.value.id, "source_capture")
+        self.assertIsInstance(ids.value.value.ctx, ast.Load)
         self.assertNotIn("finetune", _import_roots(path))
 
 

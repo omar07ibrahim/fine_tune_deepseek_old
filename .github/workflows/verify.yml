@@ -1,0 +1,142 @@
+name: Verify
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+  PYTHONHASHSEED: "0"
+
+jobs:
+  stdlib:
+    name: Standard-library gate (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version:
+          - "3.11"
+          - "3.12"
+          - "3.13"
+          - "3.14"
+
+    steps:
+      - name: Check out the exact revision
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Confirm the optional runtime is absent
+        run: |
+          python - <<'PY'
+          import importlib.util
+
+          if importlib.util.find_spec("tokenizers") is not None:
+              raise SystemExit("tokenizers must be absent from the stdlib gate")
+          PY
+
+      - name: Verify the inherited snapshot provenance
+        run: python -B tools/verify_legacy_snapshot.py
+
+      - name: Run the base-install test suite
+        run: python -B -m unittest discover -s tests -v
+
+      - name: Reproduce the LossTopology evidence
+        run: python -B tools/render_loss_topology_evidence.py --check
+
+      - name: Confirm verification left the checkout clean
+        run: test -z "$(git status --short)"
+
+  tokenizer:
+    name: Token-boundary gate (Python 3.12)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out the exact revision
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install the pinned runtime and exported project wheel
+        run: |
+          mkdir -p "$RUNNER_TEMP/source" "$RUNNER_TEMP/dist"
+          git archive --format=tar HEAD | tar -xf - -C "$RUNNER_TEMP/source"
+          python -m pip install \
+            --disable-pip-version-check \
+            --no-input \
+            --only-binary=:all: \
+            "tokenizers==0.21.4"
+          python -m pip wheel \
+            --disable-pip-version-check \
+            --no-deps \
+            --wheel-dir "$RUNNER_TEMP/dist" \
+            "$RUNNER_TEMP/source"
+          wheel=$(printf '%s\n' "$RUNNER_TEMP"/dist/loss_topology_lab-*.whl)
+          test -f "$wheel"
+          python -m pip install \
+            --disable-pip-version-check \
+            --no-deps \
+            "$wheel"
+          python -m pip check
+
+      - name: Exercise the installed console interfaces
+        run: |
+          mkdir -p "$RUNNER_TEMP/smoke"
+          cd "$RUNNER_TEMP/smoke"
+          python - <<'PY'
+          import importlib.metadata
+          import os
+          from pathlib import Path
+
+          import token_boundary
+          import tokenizers
+
+          workspace = Path(os.environ["GITHUB_WORKSPACE"]).resolve()
+          installed = Path(token_boundary.__file__).resolve()
+          if installed.is_relative_to(workspace):
+              raise SystemExit("token_boundary was imported from the checkout")
+          if tokenizers.__version__ != "0.21.4":
+              raise SystemExit("unexpected tokenizers runtime")
+          if importlib.metadata.version("loss-topology-lab") != "0.1.0":
+              raise SystemExit("unexpected project distribution")
+          PY
+          loss-topology-audit --help > loss-topology-help.txt
+          token-boundary-audit \
+            < "$GITHUB_WORKSPACE/fixtures/token-boundary/aligned.v1.json" \
+            > aligned.boundary-report.json
+          cmp \
+            aligned.boundary-report.json \
+            "$GITHUB_WORKSPACE/docs/token-boundary/generated/aligned.boundary-report.json"
+
+      - name: Run the pinned-runtime test suite
+        run: python -B -m unittest discover -s tests -v
+
+      - name: Reproduce the token-boundary evidence
+        run: python -B tools/render_token_boundary_evidence.py --check
+
+      - name: Confirm verification left the checkout clean
+        run: test -z "$(git status --short)"
